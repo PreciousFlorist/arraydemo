@@ -1,0 +1,143 @@
+{
+	"cta": [
+		{
+			"title": "Have a project in mind? Let's start a conversation!",
+			"buttonText": "Request a quote",
+			"background": "sidebar-contact"
+		}
+	],
+	"navigationLinks": [
+		{
+			"title": "Work",
+			"type": "link",
+			"url": "#work"
+		},
+		{
+			"title": "What we do",
+			"type": "dropdown",
+			"dropdownContent": {
+				"background": "header-primary",
+				"header": {
+					"title": "Our Approach",
+					"description": "Discover our five-step approach to award-winning greatness.",
+					"actionText": "See how we work",
+					"actionLink": "#our-approach"
+				},
+				"items": [
+					{
+						"image": "/images/navigation/what-we-do/lightbulb.svg",
+						"title": "MARKETING STRATEGY & AD CAMPAIGNS",
+						"alt": "Lightbulb"
+					},
+					{
+						"image": "/images/navigation/what-we-do/measure.svg",
+						"title": "Brand strategy & development",
+						"alt": "Pencil and ruler"
+					},
+					{
+						"image": "/images/navigation/what-we-do/devices.svg",
+						"title": "Website & development",
+						"alt": "A tablet, computer, and phone"
+					},
+					{
+						"image": "/images/navigation/what-we-do/marketing.svg",
+						"title": "SEO, Social media & digital marketing",
+						"alt": "A phone with a megaphone"
+					},
+					{
+						"image": "/images/navigation/what-we-do/design.svg",
+						"title": "Graphic design & print design",
+						"alt": "Colour swatches"
+					},
+					{
+						"image": "/images/navigation/what-we-do/copywriting.svg",
+						"title": "Content design & copywriting",
+						"alt": "Hand with a pen"
+					}
+				]
+			},
+			"cta": {
+				"title": "Our approach",
+				"description": "Discover our five-step approach to award-winning greatness.",
+				"buttonText": "See how we work",
+				"background": "sidebar-services"
+			}
+		},
+		{
+			"title": "Company",
+			"type": "dropdown",
+			"dropdownContent": {
+				"background": "header-secondary",
+				"header": {
+					"title": "Meet Array",
+					"description": "Get to know us and learn more about our company culture."
+				},
+				"items": [
+					{
+						"image": "/images/navigation/company/eye.svg",
+						"title": "Who we are",
+						"alt": "An eye"
+					},
+					{
+						"image": "/images/navigation/company/network.svg",
+						"title": "Team",
+						"alt": "An atom"
+					},
+					{
+						"image": "/images/navigation/company/connect.svg",
+						"title": "Community",
+						"alt": "People connecting"
+					},
+					{
+						"image": "/images/navigation/company/typewriter.svg",
+						"title": "Careers",
+						"alt": "A typewriter"
+					},
+					{
+						"image": "/images/navigation/company/diamond.svg",
+						"title": "Awards",
+						"alt": "A diamond"
+					}
+				]
+			},
+
+			"cta": {
+				"title": "Meet Array",
+				"description": "Get to know us and learn more about our company culture.",
+				"background": "sidebar-contact"
+			}
+		},
+		{
+			"title": "Blog",
+			"type": "link",
+			"url": "#blog"
+		},
+		{
+			"title": "Contact",
+			"type": "link",
+			"url": "#contact"
+		}
+	],
+	"socialLinks": [
+		{
+			"image": "/images/social-media/facebook.png",
+			"alt": "Facebook",
+			"link": "#facebook"
+		},
+		{
+			"image": "/images/social-media/instagram.png",
+			"alt": "Instagram",
+			"link": "#instagram"
+		},
+		{
+			"image": "/images/social-media/linkedin.png",
+			"alt": "LinkedIn",
+			"link": "#linkedin"
+		},
+		{
+			"image": "/images/social-media/pintrest.png",
+			"alt": "Pintrest",
+			"link": "#pintrest"
+		}
+	]
+}
