@@ -1,0 +1,165 @@
+{
+	"form": {
+		"slides": [
+			{
+				"backgroundImage": "sidebar-contact",
+				"nav": "Contact details",
+				"title": "Let's start the conversation.",
+				"description": "We're glad you found Array and choose to get in touch. So enough about us, what about you?",
+				"fields": [
+					{
+						"placeholder": "Please enter your name here",
+						"type": "text",
+						"size": "full"
+					},
+					{
+						"placeholder": "email@website.com",
+						"type": "email",
+						"size": "half"
+					},
+					{
+						"placeholder": "Enter your phone number",
+						"type": "tel",
+						"size": "half"
+					},
+					{
+						"placeholder": "What do you want us to know?",
+						"type": "textarea",
+						"size": "full"
+					}
+				],
+				"footerText": "",
+				"buttonText": "Next"
+			},
+			{
+				"backgroundImage": "sidebar-services",
+				"nav": "Services",
+				"title": "It's great to meet you!",
+				"description": "What can we do for you? Pick one - or any combination - of our awesome services below.",
+				"fields": [
+					{
+						"type": "checkbox",
+						"options": [
+							{
+								"title": "MARKETING STRATEGY & AD CAMPAIGNS",
+								"image": "/images/navigation/what-we-do/lightbulb.svg",
+								"alt": "Lightbulb"
+							},
+							{
+								"title": "BRAND STRATEGY & DEVELOPMENT",
+								"image": "/images/navigation/what-we-do/measure.svg",
+								"alt": "Pencil and ruler"
+							},
+							{
+								"title": "WEBSITE DESIGN & DEVELOPMENT",
+								"image": "/images/navigation/what-we-do/devices.svg",
+								"alt": "A tablet, computer, and phone"
+							},
+							{
+								"title": "SEO, SOCIAL MEDIA & DIGITAL MARKETING",
+								"image": "/images/navigation/what-we-do/marketing.svg",
+								"alt": "A phone with a megaphone"
+							},
+							{
+								"title": "GRAPHIC DESIGN & PRINT DESIGN",
+								"image": "/images/navigation/what-we-do/design.svg",
+								"alt": "Colour swatches"
+							},
+							{
+								"title": "CONTENT DESIGN & COPYWRITING",
+								"image": "/images/navigation/what-we-do/copywriting.svg",
+								"alt": "Hand with a pen"
+							}
+						]
+					}
+				],
+				"footerText": "My project isn't listed above",
+				"buttonText": "Next",
+				"previousButton": true
+			},
+			{
+				"backgroundImage": "sidebar-project",
+				"nav": "Project details",
+				"title": "Sounds great - tell us more!",
+				"description": "Let us know some of the finer details of your project.",
+				"fields": [
+					{
+						"label": "Do you have a budget in mind?",
+						"type": "text",
+						"placeholder": "$1000-80,000+",
+						"size": "half"
+					},
+					{
+						"label": "When do you need it completed by?",
+						"type": "text",
+						"placeholder": "Please enter a date",
+						"size": "half"
+					},
+					{
+						"label": "What else can you tell us about you and your project?",
+						"type": "textarea",
+						"placeholder": "Requirements, intentions, target audience, etc.",
+						"size": "full"
+					}
+				],
+				"footerText": "",
+				"buttonText": "Next",
+				"previousButton": true
+			},
+			{
+				"backgroundImage": "sidebar-complete",
+				"nav": "Complete",
+				"title": "Ready to wrap up?",
+				"description": "I think we have all we need right now to get the ball rolling here. Just one more thing…",
+				"header": "How did you find out about us?",
+				"fields": [
+					{
+						"type": "checkbox",
+						"options": [
+							{
+								"title": "GOOGLE SEARCH",
+								"image": "/images/navigation/sidebar/icons/google-search.svg",
+								"alt": "A browser icon with a magnifying glass"
+							},
+							{
+								"title": "SOCIAL MEDIA",
+								"image": "/images/navigation/sidebar/icons/social-media.svg",
+								"alt": "Two speach bubbles, one with a thumbs up and another with a heart"
+							},
+							{
+								"title": "ONLINE AD",
+								"image": "/images/navigation/sidebar/icons/online-ads.svg",
+								"alt": "A laptop screen with a megaphone"
+							},
+							{
+								"title": "PRINT AD",
+								"image": "/images/navigation/sidebar/icons/print.svg",
+								"alt": "A newspaper"
+							},
+							{
+								"title": "WORD OF MOUTH",
+								"image": "/images/navigation/sidebar/icons/word-of-mouth.svg",
+								"alt": "An ear"
+							},
+							{
+								"title": "SOMEWHERE ELSE",
+								"image": "/images/navigation/sidebar/icons/somewhere-else.svg",
+								"alt": "A checkbox form with a pencil"
+							}
+						]
+					}
+				],
+				"footerText": "",
+				"buttonText": "Submit",
+				"previousButton": true,
+				"submitAction": "closeOverlay"
+			}
+		],
+		"buttons": {
+			"next": "Next",
+			"previous": "Previous",
+			"submit": "Submit",
+			"closeOverlay": "Close"
+		}
+	}
+}
