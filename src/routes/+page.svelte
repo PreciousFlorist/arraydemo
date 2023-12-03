@@ -1,15 +1,17 @@
 <script>
 	import ContactModal from '$lib/components/blocks/ContactModal.svelte';
+	import NewsGrid from '$lib/components/blocks/NewsGrid.svelte';
 	import Link from '$lib/components/assets/Link.svelte';
 	import Button from '$lib/components/assets/Button.svelte';
 
 	export let data;
-	const { contact } = data;
+	const { contact, news } = data;
 </script>
 
 <ContactModal {contact} />
 
 <div class="py-[200px] pl-[200px] bg-green-200 flex flex-col gap-10">
+
 	<Link url="https://example.com" text="Meet the team" color="blue" />
 	<Link url="https://example.com" text="Discover More" color="orange" />
 
@@ -27,3 +29,5 @@
 		reverseArrow={true}
 	/>
 </div>
+
+<NewsGrid {news} />

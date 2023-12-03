@@ -1,0 +1,46 @@
+<script>
+	import { isValidArray, isValidObject } from '$lib/utils/validation';
+	import Button from '$lib/components/assets/Button.svelte';
+
+	export let news;
+	let cta = news.cta || {};
+	let cards = news.cards || [];
+
+	console.log(news);
+</script>
+
+<div class="800:pl-14 1100:pl-20 py-[90px]">
+	<div
+		class="border-y border-silver flex flex-col 800:flex-row justify-between gap-5 items-start 800:items-center p-9"
+	>
+		{#if news.header}
+			<p class="text-onyx font-serif text-3xl 580:text-4xl xl:text-5xl">{news.header}</p>
+		{/if}
+
+		{#if isValidObject(cta) && cta.buttonText && cta.buttonURL}
+			<Button text={cta.buttonText} href={cta.buttonURL} invert={true} />
+		{/if}
+	</div>
+	{#if isValidArray(cards)}
+		<ul class="flex overflow-scroll">
+			{#each cards as card, index}
+				<li
+					class={`group w-2/3 580:w-5/12 xl:w-1/4 flex flex-col justify-between px-6 py-9 min-h-[350px] min-w-[280px] max-h-[400px] aspect-square relative cursor-pointer border-b border-r border-silver after:transition-all after:duration-300 after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-white hover:after:opacity-0 news-bg-${
+						index + 1
+					}`}
+				>
+					<p
+						class="transition-all duration-300 relative z-10 text-xl 580:text-2xl xl:text-3xl font-serif text-onyx font-light group-hover:text-white"
+					>
+						{card.title}
+					</p>
+					<p
+						class="transition-all duration-300 relative z-10 text-base font-sans text-onyx font-semibold tracking-1px uppercase group-hover:text-white"
+					>
+						{card.date}
+					</p>
+				</li>
+			{/each}
+		</ul>
+	{/if}
+</div>

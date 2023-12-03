@@ -29,3 +29,24 @@
 	background-image: url('/images/navigation/sidebar/backgrounds/services.jpg');
 	@apply bg-no-repeat bg-right;
 }
+
+/* News */
+.news-bg-1 {
+	background-image: url('/images/components/news/background-1.jpg');
+	@apply bg-no-repeat bg-right bg-cover;
+}
+
+.news-bg-2 {
+	background-image: url('/images/components/news/background-2.jpg');
+	@apply bg-no-repeat bg-right bg-cover;
+}
+
+.news-bg-3 {
+	background-image: url('/images/components/news/background-3.jpg');
+	@apply bg-no-repeat bg-right bg-cover;
+}
+
+.news-bg-4 {
+	background-image: url('/images/components/news/background-4.jpg');
+	@apply bg-no-repeat bg-right bg-cover;
+}
