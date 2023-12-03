@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'SpeziaSerif';
+    src: url('/fonts/SpeziaSerif-RegularB.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.font-ballance{
+    text-wrap: balance;
+}
