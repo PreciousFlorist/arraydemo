@@ -1,0 +1,69 @@
+{
+	"logo": {
+		"image": "/images/array-icon-logo.svg",
+		"alt": "The array logo"
+	},
+	"productsSection": {
+		"title": "We develop on the following platforms:",
+		"products": [
+			{
+				"image": "/images/assets/products/wordpress.svg",
+				"alt": "WordPress logo"
+			},
+			{
+				"image": "/images/assets/products/shopify.svg",
+				"alt": "Shopify logo"
+			}
+		]
+	},
+	"cta": {
+		"text": "Sign up for our unregularly scheduled newsletter.",
+		"buttonText": "Subscribe now",
+		"buttonHref": "#subscribe-now"
+	},
+	"socialMediaLinks": [
+		{
+			"image": "/images/social-media/facebook.png",
+			"alt": "Facebook",
+			"url": "#facebook"
+		},
+		{
+			"image": "/images/social-media/instagram.png",
+			"alt": "Instagram",
+			"url": "#instagram"
+		},
+		{
+			"image": "/images/social-media/linkedin.png",
+			"alt": "LinkedIn",
+			"url": "#linkedin"
+		},
+		{
+			"image": "/images/social-media/pintrest.png",
+			"alt": "Pintrest",
+			"url": "#pintrest"
+		}
+	],
+	"tos": {
+		"acknowledgement": "In the spirit of Truth and Reconciliation, we would like to acknowledge that our office operates on the traditional territories of the Snuneymuxw First Nation peoples. We thank them for allowing us to live, work, and play on their traditional, ancestral, and unceded territory.",
+		"terms": "This site is protected by reCAPTCHA and the <a href='#privacy-policy' class='text-egyptianblue'>Google Privacy Policy</a> and <a href='#tos' class='text-egyptianblue'>Terms of Service</a> apply."
+	},
+	"payments": {
+		"ctaText": "Pay an invoice",
+		"ctaUrl": "#pay-an-invoice",
+
+		"methods": [
+			{
+				"image": "/images/assets/payments/mastercard.svg",
+				"alt": "Mastercard"
+			},
+			{
+				"image": "/images/assets/payments/visa.svg",
+				"alt": "Visa"
+			},
+			{
+				"image": "/images/assets/payments/americanexpress.svg",
+				"alt": "American Express"
+			}
+		]
+	}
+}
