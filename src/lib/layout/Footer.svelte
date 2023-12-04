@@ -16,7 +16,7 @@
 	let payments = footer?.payments || {};
 </script>
 
-<footer class="800:pl-14 1100:pl-20 py-7 bg-whitesmoke">
+<footer class="component-spacing py-7 bg-whitesmoke">
 	<div class="border-y border-silver grid grid-cols-1 auto-rows-auto">
 		<!-- Products -->
 		<div

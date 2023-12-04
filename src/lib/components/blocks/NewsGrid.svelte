@@ -5,11 +5,9 @@
 	export let news;
 	let cta = news.cta || {};
 	let cards = news.cards || [];
-
-	console.log(news);
 </script>
 
-<div class="800:pl-14 1100:pl-20 py-[90px]">
+<div class="component-spacing py-[90px]">
 	<div
 		class="border-y border-silver flex flex-col 800:flex-row justify-between gap-5 items-start 800:items-center p-9"
 	>

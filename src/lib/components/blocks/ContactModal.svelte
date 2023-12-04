@@ -54,7 +54,7 @@
 
 <!-- Contact form -->
 <div
-	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll 800:pl-14 1100:pl-20 pt-[63px] 950:pt-20 z-10 transition-all duration-200 ${
+	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll component-spacing pt-[63px] 950:pt-20 z-10 transition-all duration-200 ${
 		$isOverlayOpen
 			? 'opacity-1 visible pointer-events-auto'
 			: 'opacity-0 invisible pointer-events-none'

@@ -50,3 +50,34 @@
 	background-image: url('/images/components/news/background-4.jpg');
 	@apply bg-no-repeat bg-right bg-cover;
 }
+
+/* Call to Action */
+.cta-bg-1 {
+	background-image: url('/images/components/cta/instagram-1.jpg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.cta-bg-2 {
+	background-image: url('/images/components/cta/instagram-2.jpg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.cta-bg-3 {
+	background-image: url('/images/components/cta/instagram-3.jpg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.cta-bg-4 {
+	background-image: url('/images/components/cta/instagram-4.jpg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.cta-gradient{
+	background-image: url('/images/components/cta/background-gradient.jpeg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.cta-pinstripe{
+	background-image: url('/images/components/cta/pinstripe.svg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
