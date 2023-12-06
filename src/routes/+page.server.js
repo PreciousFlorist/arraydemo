@@ -1,4 +1,7 @@
 export async function load({ fetch }) {
+	const heroResponse = await fetch('/sample-data/components/hero.json');
+	const heroData = await heroResponse.json();
+
 	const contactResponse = await fetch('/sample-data/components/contact.json');
 	const contactData = await contactResponse.json();
 
@@ -12,6 +15,7 @@ export async function load({ fetch }) {
 	const accordionData = await accordionResponse.json();
 
 	return {
+		hero: heroData,
 		contact: contactData,
 		news: newsData,
 		cta: ctaData,

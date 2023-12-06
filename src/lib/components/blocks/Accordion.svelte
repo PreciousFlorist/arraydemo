@@ -35,15 +35,17 @@ This component implements an accordion with an embedded carousel and custom curs
 	// Mouse event handlers for custom cursor behavior.
 	function handleMouseEnter() {
 		cursorStore.toggle(true);
+		cursorStore.updateText(accordion.cursorText); // Set cursor text value
 	}
 	function handleMouseLeave() {
 		cursorStore.toggle(false);
+		cursorStore.updateText(''); // Unset cursor text value
 	}
 </script>
 
 <div class="component-spacing py-[90px]">
 	<!-- Accordion title -->
-	<p class="uppercase font-sans font-semibold text-onyx tracking-1px px-6 lg:px-9 pb-5">
+	<p class="uppercase font-sans font-semibold text-onyx tracking-1px px-6 lg:px-9 pb-5 1100:px-20">
 		{accordion.title}
 	</p>
 	{#if isValidArray(panels)}
@@ -53,7 +55,7 @@ This component implements an accordion with an embedded carousel and custom curs
 				<div class="border-b border-silver">
 					<!-- Toggle Accordion Button -->
 					<button
-						class={`flex items-center justify-between text-left w-full py-5 px-6 lg:px-9 focus:outline-none transition-[padding] duration-300 ${
+						class={`flex items-center justify-between text-left w-full py-5 px-6 lg:px-9 1100:px-20 focus:outline-none transition-[padding] duration-300 ${
 							openAccordionIndex === index ? 'lg:py-6' : 'py-5'
 						}`}
 						on:click={() => toggleAccordion(index)}
@@ -84,7 +86,7 @@ This component implements an accordion with an embedded carousel and custom curs
 					>
 						<!-- Header & CTA -->
 						<div
-							class="lg:w-[45%] h-full p-6 pb-8 lg:p-12 border-t border-r border-silver flex flex-col gap-7 justify-between"
+							class="lg:w-[45%] h-full p-6 pb-8 lg:p-12 1100:pl-20 border-t border-r border-silver flex flex-col gap-7 justify-between"
 						>
 							<p class="font-sans text-arraygray leading-[1.5] font-light text-2xl">{panel.body}</p>
 

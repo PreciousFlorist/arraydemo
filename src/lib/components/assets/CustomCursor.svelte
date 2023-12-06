@@ -7,14 +7,16 @@
 	/*------------------------------
 	# Local State
 	------------------------------*/
-	// Visibility state of the cursor
-	let isVisible = false;
+	let isVisible = false; // Visibility state of the cursor
+	let cursorText; // Default text
 
 	/*------------------------------
 	# Subscriptions
 	------------------------------*/
 	cursorStore.subscribe((state) => {
 		isVisible = state.enabled;
+		cursorText = state.text;
+
 	});
 </script>
 
@@ -27,9 +29,13 @@
 	>
 		<!-- Cursor Icon -->
 		<div class="relative z-10">
-			<img src="/images/assets/cursor/arrow.svg" alt="" />
+			<img src="/images/assets/cursor/arrow.svg" alt="An arrow" />
 		</div>
 		<!-- Cursor Text -->
-		<p class="relative z-10 uppercase font-semibold font-sans text-white tracking-1px">Swipe</p>
+		{#if cursorText}
+			<p class="relative z-10 uppercase font-semibold font-sans text-white tracking-1px">
+				{cursorText}
+			</p>
+		{/if}
 	</div>
 </div>

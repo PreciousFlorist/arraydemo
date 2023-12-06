@@ -3,7 +3,8 @@ import { writable } from 'svelte/store';
 const createCursorStore = () => {
 	const { subscribe, set, update } = writable({
 		enabled: false,
-		customCursor: null
+		customCursor: null,
+		text: ''
 	});
 
 	// Initialize the custom cursor
@@ -29,6 +30,11 @@ const createCursorStore = () => {
 		});
 	}
 
+	// Update text
+	function updateText(newText) {
+        update(state => ({ ...state, text: newText }));
+    }
+
 	// Cleanup
 	function destroy() {
 		update((state) => {
@@ -41,7 +47,8 @@ const createCursorStore = () => {
 		subscribe,
 		initialize,
 		toggle,
-		destroy
+		destroy,
+		updateText
 	};
 };
 

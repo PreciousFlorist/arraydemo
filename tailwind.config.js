@@ -16,7 +16,8 @@ module.exports = {
 				egyptianblue: '#2c3a9f',
 				sandybrown: '#f59e50',
 				jet: '#333333',
-				arraygray: '#777777'
+				arraygray: '#777777',
+				lightbox: '#1E1E1E'
 			},
 			backgroundImage: {
 				'primary-pattern': "url('/images/navigation/what-we-do/background.jpeg')",
@@ -64,6 +65,15 @@ module.exports = {
 				1100: '1100px',
 				1200: '1200px',
 				1400: '1400px'
+			},
+			keyframes: {
+				'fade-in': {
+					'0%': { opacity: '0%' },
+					'100%': { opacity: '100%' }
+				}
+			},
+			animation: {
+				'fade-in': 'fade-in 0.5s ease-in-out'
 			}
 		}
 	},
