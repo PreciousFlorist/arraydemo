@@ -8,9 +8,13 @@ export async function load({ fetch }) {
 	const ctaResponse = await fetch('/sample-data/components/cta.json');
 	const ctaData = await ctaResponse.json();
 
+	const accordionResponse = await fetch('/sample-data/components/accordion.json');
+	const accordionData = await accordionResponse.json();
+
 	return {
 		contact: contactData,
 		news: newsData,
-		cta: ctaData
+		cta: ctaData,
+		accordion: accordionData
 	};
 }

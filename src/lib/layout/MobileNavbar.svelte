@@ -148,7 +148,7 @@
 				{#if link.type === 'dropdown'}
 					<div
 						bind:this={submenuElements[index]}
-						class="absolute z-40 w-full h-[calc(100vh-64px)] top-0 bg-white border-b border-silver left-full z-10 overflow-scroll"
+						class="absolute z-40 w-full h-[calc(100vh-64px)] top-0 bg-white border-b border-silver left-full overflow-scroll"
 					>
 						<div class="py-4 px-[24px] flex justify-between border-b border-silver">
 							<p class="text-lg font-bold">{link.title}</p>
