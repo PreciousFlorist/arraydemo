@@ -1,14 +1,14 @@
 <!-- 
 AccordionComponent.svelte
 
-This component implements an accordion with dynamic carousel functionality. 
-Each accordion panel contains a carousel with images/videos and custom positioned navigation buttons.
+This component implements an accordion with an embedded carousel and custom cursor toggle. 
 -->
 
 <script>
-	//------------------------------------------------------------------------------
-	// Imports
-	//------------------------------------------------------------------------------
+	/*------------------------------
+	# Imports
+	------------------------------*/
+
 	import { browser } from '$app/environment';
 	import { isValidArray } from '$lib/utils/validation';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
@@ -16,17 +16,17 @@ Each accordion panel contains a carousel with images/videos and custom positione
 	import Link from '$lib/components/assets/Link.svelte';
 	import { cursorStore } from '$lib/stores/cursorStore';
 
-	//------------------------------------------------------------------------------
-	// Component Exports and State
-	//------------------------------------------------------------------------------
+	/*------------------------------
+	# Fetch and Destructure Props
+	------------------------------*/
 	// Accordion panels data and initial state for the open panel.
 	export let accordion;
 	let panels = accordion.panels || [];
 	let openAccordionIndex = 0; // First panel is open by default
 
-	//------------------------------------------------------------------------------
-	// Utility Functions
-	//------------------------------------------------------------------------------
+	/*------------------------------
+	# Utility Functions
+	------------------------------*/
 	// Toggle function to open or close accordion panels.
 	function toggleAccordion(index) {
 		openAccordionIndex = openAccordionIndex === index ? null : index;

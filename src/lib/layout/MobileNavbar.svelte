@@ -1,12 +1,22 @@
-<script>
-	import gsap from 'gsap';
-	import { isValidArray } from '$lib/utils/validation';
+<!--
+MobileNavbar.svelte
 
+This component creates a responsive header for mobile devices, features navigation links with dropdown functionality
+-->
+
+<script>
+	/*------------------------------
+	# Imports
+	------------------------------*/
+	import gsap from 'gsap';
 	import SocialMediaIcon from '$lib/components/assets/SocialMediaIcon.svelte';
 	import Button from '$lib/components/assets/Button.svelte';
 	import { toggleContactModal } from '$lib/utils/contactForm.js';
+	import { isValidArray } from '$lib/utils/validation';
 
-	// Process CMS content
+	/*------------------------------
+	# Fetch and Destructure Props
+	------------------------------*/
 	export let header;
 	let navigationLinks = header?.navigationLinks || [];
 	let socialLinks = header?.socialLinks || [];
@@ -14,6 +24,10 @@
 
 	let active = false;
 	let submenuElements = [];
+
+	/*------------------------------
+    # Local State and Functions
+    ------------------------------*/
 
 	function openContactModal() {
 		toggleContactModal();
@@ -92,12 +106,15 @@
 			{#if isValidArray(navigationLinks)}
 				<ul class="pl-[24px] py-5 grow">
 					{#each navigationLinks as link, index}
+						<!-- Standard Links -->
 						{#if link.type === 'link'}
 							<li class="py-2.5">
 								<a class="text-jet text-[19px] font-semibold uppercase tracking-1px" href={link.url}
 									>{link.title}</a
 								>
 							</li>
+
+							<!-- Submenu Links -->
 						{:else if link.type === 'dropdown'}
 							<li class=" py-2.5">
 								<button
@@ -123,7 +140,7 @@
 				<img src="/images/search-icon.svg" alt="Search" class="cursor-pointer" />
 			</div>
 		</div>
-		<!-- CTA -->
+		<!-- Call to Action -->
 		{#if isValidArray(cta)}
 			{#each cta as banner}
 				<div
@@ -134,7 +151,7 @@
 				</div>
 			{/each}
 		{/if}
-		<!-- Social Links -->
+		<!-- Social Media Links -->
 		<ul class="flex flex-row z-40 border-b border-silver">
 			{#each socialLinks as social}
 				<li class="w-1/4 border-l border-silver flex justify-center items-center aspect-square">
@@ -142,7 +159,7 @@
 				</li>
 			{/each}
 		</ul>
-		<!-- Submenu -->
+		<!-- Submenus -->
 		{#if isValidArray(navigationLinks)}
 			{#each navigationLinks as link, index}
 				{#if link.type === 'dropdown'}
@@ -151,7 +168,9 @@
 						class="absolute z-40 w-full h-[calc(100vh-64px)] top-0 bg-white border-b border-silver left-full overflow-scroll"
 					>
 						<div class="py-4 px-[24px] flex justify-between border-b border-silver">
-							<p class="text-lg font-bold">{link.title}</p>
+							<!-- Submenu Title -->
+							<p class="uppercase tracking-1px text-lg font-bold text-arraygray">{link.title}</p>
+							<!-- Close Submenu -->
 							<button
 								on:click={() => toggleSubmenu(index)}
 								class="text-egyptianblue uppercase font-semibold text-sm tracking-1px flex gap-2.5 items-center"
@@ -166,7 +185,9 @@
 								<li
 									class="border-b border-r border-silver px-[24px] p-5 flex flex-col gap-2.5 justify-center items-center"
 								>
+									<!-- Link Icon -->
 									<img src={item.image} alt={item.alt} class="w-16 relative" />
+									<!-- Link Title -->
 									<p
 										class="text-center uppercase text-jet text-semibold tracking-1px text-xs"
 										href="#"
@@ -177,6 +198,7 @@
 							{/each}
 						</ul>
 
+						<!-- Background -->
 						<div
 							class={`py-10 px-[24px] flex flex-col gap-2 ${link.dropdownContent.background} bg-cover`}
 						>

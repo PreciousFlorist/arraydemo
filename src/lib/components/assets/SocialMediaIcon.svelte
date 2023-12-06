@@ -1,4 +1,7 @@
 <script>
+	/*------------------------------
+	# Props
+	------------------------------*/
 	export let image;
 	export let alt;
 	export let link;
@@ -9,6 +12,7 @@
 	href={link}
 	class="group cursor-pointer flex justify-center items-center w-full h-full relative overflow-hidden after:absolute after:bg-whitesmoke after:h-full after:top-full after:bottom-0 after:right-0 after:left-0 after:transition-all after:duration-300 hover:after:top-0"
 >
+	<!-- Social Media Icon & Hover States -->
 	<img
 		src={image}
 		{alt}

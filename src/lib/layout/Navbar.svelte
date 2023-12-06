@@ -1,14 +1,27 @@
+<!-- 
+Header.svelte
+
+The website's header, featuring logo, navigation links, social media links, and a search bar.
+-->
+
 <script>
-	import { isValidArray } from '$lib/utils/validation';
+	/*------------------------------
+	# Imports
+	------------------------------*/
 	import Link from '$lib/components/assets/Link.svelte';
 	import SocialMediaIcon from '$lib/components/assets/SocialMediaIcon.svelte';
+	import { isValidArray } from '$lib/utils/validation';
 
-	// Process CMS content
+	/*------------------------------
+    # Fetch and Destructure Props
+    ------------------------------*/
 	export let header;
 	let navigationLinks = header?.navigationLinks || [];
 	let socialLinks = header?.socialLinks || [];
 
-	// Toggle search bar visibility
+	/*------------------------------
+    # Toggle Search Functionality
+    ------------------------------*/
 	let isSearchOpen = false;
 	function toggleSearch() {
 		isSearchOpen = !isSearchOpen;
@@ -29,6 +42,7 @@
 		<ul class="flex flex-row">
 			{#if isValidArray(navigationLinks)}
 				{#each navigationLinks as link}
+				
 					<!-- Standard links -->
 					{#if link.type === 'link'}
 						<li
@@ -42,7 +56,8 @@
 								{link.title}
 							</p>
 						</li>
-						<!-- Links with submenus -->
+
+						<!-- Links with Submenus -->
 					{:else if link.type === 'dropdown'}
 						<li
 							class={`p-15px xl:px-25px flex items-center uppercase text-onyx font-semibold tracking-1px cursor-default group/dropdown duration-200
@@ -59,7 +74,7 @@
 								<div
 									class={`absolute top-full w-full pl-14 1100:pl-20 right-0 l-14 border-t border-silver flex transition-all duration-300 group-hover/dropdown:opacity-100 group-hover/dropdown:visible opacity-0 invisible`}
 								>
-									<!-- Submenu greeting -->
+									<!-- Submenu Greeting -->
 									<div
 										class={`flex flex-col w-1/4 justify-center items-center ${
 											link.dropdownContent.items && link.dropdownContent.items.length >= 6
@@ -93,7 +108,7 @@
 										</div>
 									</div>
 
-									<!-- Submenu pages -->
+									<!-- Submenu Pages -->
 									<div class={`flex grow flex-wrap bg-cover ${link.dropdownContent.background} `}>
 										{#each link.dropdownContent.items as cell}
 											<div
@@ -136,6 +151,7 @@
 					{/if}
 				{/each}
 			{/if}
+
 			<!-- Search Bar -->
 			<li class="px-3.5 1100:py-6 1100:pr-10 relative flex items-center">
 				<button class="relative z-30 flex items-center py-3px" on:click={toggleSearch}>
@@ -152,7 +168,8 @@
 				/>
 			</li>
 		</ul>
-		<!-- Socials -->
+
+		<!-- Social Media Links -->
 		{#if isValidArray(socialLinks)}
 			<ul class="flex flex-row relative z-30 min-h-[77px]">
 				{#each socialLinks as social}

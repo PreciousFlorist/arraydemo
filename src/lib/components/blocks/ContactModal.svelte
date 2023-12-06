@@ -1,4 +1,15 @@
+<!--
+ContactModal.svelte
+
+This component includes a contact form that overlays the entire screen.
+- Styled input fields for including text, email, telephone, checkbox, and textarea.
+- Background image transitions for each form page.
+-->
+
 <script>
+	/*------------------------------
+	# Imports
+	------------------------------*/
 	import { writable } from 'svelte/store';
 	import { isValidArray } from '$lib/utils/validation';
 	import { gsap } from 'gsap';
@@ -6,19 +17,27 @@
 	import Button from '$lib/components/assets/Button.svelte';
 	import { isOverlayOpen, toggleContactModal } from '$lib/utils/contactForm.js';
 
+	/*------------------------------
+	# Fetch and Destructure Props
+	------------------------------*/
 	export let contact;
 	let slides = contact.form.slides || [];
-	let currentSlideIndex = 0;
-	let currentBackgroundImage = slides[currentSlideIndex]?.backgroundImage || '';
 	const selectedCards = writable({});
+
+	let currentSlideIndex = 0; // Starting slide
+	let currentBackgroundImage = slides[currentSlideIndex]?.backgroundImage || ''; // Starting background image/toggle
 
 	let active = false;
 
+	/*------------------------------
+	# Utility Functions
+	------------------------------*/
+	// Toggle visibilty
 	function toggleCard(title) {
 		selectedCards[title] = !selectedCards[title];
 	}
 
-	
+	// Navigation
 	function goToNextSlide() {
 		if (currentSlideIndex < slides.length - 1) {
 			currentSlideIndex += 1;
@@ -32,7 +51,7 @@
 			currentBackgroundImage = slides[currentSlideIndex].backgroundImage;
 		}
 	}
-
+	// Submission
 	function handleSubmit() {
 		toggleContactModal();
 		gsap.delayedCall(0.3, () => {
@@ -41,6 +60,7 @@
 		});
 	}
 
+	// Reset form position on close
 	function resetSlideIndex() {
 		currentSlideIndex = 0;
 		currentBackgroundImage = slides[currentSlideIndex]?.backgroundImage || '';
@@ -49,10 +69,9 @@
 	$: if ($isOverlayOpen === false) {
 		resetSlideIndex(); // Reset when the modal is closed
 	}
-	
 </script>
 
-<!-- Contact form -->
+<!-- Contact Form Modal -->
 <div
 	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll component-spacing pt-[63px] 950:pt-20 z-10 transition-all duration-200 ${
 		$isOverlayOpen
@@ -60,14 +79,16 @@
 			: 'opacity-0 invisible pointer-events-none'
 	} ${currentBackgroundImage}`}
 >
+	<!-- Conditional rendering based on slide data -->
 	{#if isValidArray(slides) && slides.length > 0 && currentSlideIndex < slides.length}
 		<div class="w-full h-[calc(100%-77px)]">
 			<div class="p-6 sm:p-12 950:px-20 950:py-16 xl:px-200px xl:py-100px">
-				<!-- Slide progress banner -->
+				<!-- Slide Progress Indicator and Content -->
 				<div
 					class="hidden 800:flex justify-between border-b border-silver mb-16 xl:mb-[calc(15.6vh-27px)]"
 				>
 					{#each slides as slide, index}
+						<!-- Individual Slide Indicator -->
 						<p
 							class={`uppercase text-center basis-1/4 pb-4 text-white font-semibold tracking-1px ${
 								index === currentSlideIndex
@@ -87,43 +108,13 @@
 						class="uppercase text-white flex items-center gap-1 text-[12px] tracking-1px"
 					>
 						<p class="relative top-1px">Close</p>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="10.215"
-							height="10.215"
-							viewBox="0 0 10.215 10.215"
-						>
-							<g
-								id="Group_1058"
-								data-name="Group 1058"
-								transform="translate(266.117 -379.12) rotate(90)"
-							>
-								<path
-									id="Path_2123"
-									data-name="Path 2123"
-									d="M392.712,260.692l-8.8,8.8"
-									transform="translate(-4.084 -4.084)"
-									fill="none"
-									class="stroke-white"
-									stroke-linecap="round"
-									stroke-width="1"
-								></path>
-								<path
-									id="Path_2124"
-									data-name="Path 2124"
-									d="M8.8,0,0,8.8"
-									transform="translate(388.628 256.609) rotate(90)"
-									fill="none"
-									class="stroke-white"
-									stroke-linecap="round"
-									stroke-width="1"
-								></path>
-							</g>
-						</svg>
+
+						<img src="/images/assets/contact-modal/close.svg" alt="Close modal" />
 					</button>
 				</div>
 
 				<div class="flex flex-col xl:flex-row gap-10 xl:gap-y-20">
+					
 					<!-- Slide content -->
 					<div class="xl:basis-340px 900:min-w-320px">
 						<p class="primary-heading text-white mb-2.5">{slides[currentSlideIndex].title}</p>
@@ -138,8 +129,12 @@
 							>
 								{slides[currentSlideIndex].header}
 							</p>{/if}
+						
+						<!-- Form fields -->
 						<form class="flex flex-wrap gap-5">
 							{#each slides[currentSlideIndex].fields as field}
+								
+								<!-- Text, Email, and Telephone -->
 								{#if field.type === 'text' || field.type === 'email' || field.type === 'tel'}
 									<div
 										class={`${field.size === 'full' ? 'w-full' : 'w-full 950:w-[calc(50%-10px)]'} `}
@@ -155,6 +150,8 @@
 											class="w-full bg-transparent border border-white text-white placeholder:text-white placeholder:opacity-50 h-12 rounded-3xl px-6 text-lg font-normal backdrop-blur"
 										/>
 									</div>
+								
+								<!-- Textarea -->
 								{:else if field.type === 'textarea'}
 									<div class="w-full">
 										{#if field.label}<p
@@ -168,6 +165,8 @@
 											class="py-2.5 px-15px w-full h-36 resize-none bg-transparent border border-white text-white placeholder:text-white placeholder:opacity-50 rounded-3xl text-lg font-normal backdrop-blur"
 										></textarea>
 									</div>
+									
+								<!-- Checkbox -->
 								{:else if field.type === 'checkbox'}
 									<div
 										class="grid grid-cols-1 500:grid-cols-2 730:grid-cols-3 grid-rows-2 gap-25px w-full"
@@ -190,7 +189,8 @@
 											</button>
 										{/each}
 									</div>
-
+									
+									<!-- Form Footer -->
 									{#if slides[currentSlideIndex].footerText}
 										<button
 											on:click={() => (active = !active)}

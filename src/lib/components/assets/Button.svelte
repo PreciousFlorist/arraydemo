@@ -1,11 +1,16 @@
 <script>
+	/*------------------------------
+	# Props
+	------------------------------*/
 	export let text = '';
-	export let onClick = () => {};
 	export let invert = false;
 	export let href = '#';
+	export let onClick = () => {};
 	export let reverseArrow = false;
 
-	// Define invert-specific class bindings
+	/*------------------------------
+	# State Toggles
+	------------------------------*/
 	const invertClasses = {
 		true: {
 			textClass: 'stroke-egyptianblue group-hover:stroke-white',
@@ -23,11 +28,13 @@
 	const selectedInvert = invertClasses[invert];
 </script>
 
+<!-- Button Component -->
 <a
 	{href}
 	on:click|preventDefault={onClick}
 	class={`group w-fit border uppercase rounded-full py-11px px-22px tracking-1px  relative flex items-center gap-2.5 after:z-[1] after:absolute after:rounded-full after:-left-1px after:-bottom-1px after:w-[calc(100%+2px)] after:h-1px after:opacity-0 after:transition-all after:duration-200 hover:after:h-49px hover:after:opacity-100 ${selectedInvert.bgClass}`}
 >
+	<!-- Arrow Icon -->
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		width="19.599"
@@ -57,6 +64,7 @@
 		</g>
 	</svg>
 
+	<!-- Button Text -->
 	<p class={`transition-all duration-200 z-[2] ${selectedInvert.hoverTextClass}`}>
 		{text}
 	</p>

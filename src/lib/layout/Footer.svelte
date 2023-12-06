@@ -1,13 +1,22 @@
-<script>
-	import { isValidArray, isValidObject } from '$lib/utils/validation';
+<!-- 
+Footer.svelte
 
+The website's footer, including the company logo, products, contact information, social media links, terms of service, and payment methods.
+-->
+
+<script>
+	/*------------------------------
+	# Imports
+	------------------------------*/
+	import { isValidArray, isValidObject } from '$lib/utils/validation';
 	import Button from '$lib/components/assets/Button.svelte';
 	import SocialMediaIcon from '$lib/components/assets/SocialMediaIcon.svelte';
 
-	// Accept footer data as a prop
+	/*------------------------------
+    # Fetch and Destructure Props
+    ------------------------------*/
 	export let footer;
 
-	// Directly process footer data with fallbacks
 	let logo = footer?.logo || {};
 	let products = footer?.productsSection || {};
 	let cta = footer?.cta || {};
@@ -18,6 +27,7 @@
 
 <footer class="component-spacing py-7 bg-whitesmoke">
 	<div class="border-y border-silver grid grid-cols-1 auto-rows-auto">
+
 		<!-- Products -->
 		<div
 			class="flex items-center justify-between py-5 px-6 800:px-14 row-start-3 800:row-start-1 border-t 800:border-t-0 border-silver"
@@ -46,7 +56,8 @@
 				</div>
 			{/if}
 		</div>
-		<!-- Contact -->
+
+		<!-- Contact & CTA -->
 		<div class="flex flex-row flex-wrap border-t-0 border-b 800:border-t border-silver">
 			<div
 				class="w-full 1200:w-1/2 py-5 px-6 800:py-12 800:pl-14 border-b 1200:border-b-0 border-silver flex flex-col items-center 800:items-start"
@@ -71,7 +82,8 @@
 					{/if}
 				{/if}
 			</div>
-			<!-- Socials -->
+
+			<!-- Social Media Links -->
 			<div class="w-full 1200:w-1/2 flex 1400:basis-[650px] 1400:ml-auto">
 				{#if isValidArray(socials)}
 					{#each socials as social}
@@ -90,7 +102,8 @@
 				{/if}
 			</div>
 		</div>
-		<!-- TOS -->
+
+		<!-- Terms of Service -->
 		<div class="flex flex-col-reverse 800:flex-row">
 			<div
 				class="w-full 800:w-1/2 grow py-5 px-6 800:px-14 800:py-9 border-r 1200:border-r-0 border-silver"
@@ -105,6 +118,7 @@
 				{/if}
 			</div>
 
+			<!-- Payment Methods -->
 			<div
 				class="w-full 800:w-1/2 border-b 800:border-b-0 1200:border-l border-silver flex flex-wrap 1400:basis-[650px] justify-between items-center py-5 px-6 800:pl-[50px] 800:pr-14"
 			>

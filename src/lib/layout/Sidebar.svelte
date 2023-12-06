@@ -1,4 +1,13 @@
+<!-- 
+Sidebar.svelte
+
+Fixed to the left of the screen, this component triggers the opeing and closing of the contact modal.
+-->
+
 <script>
+	/*------------------------------
+	# Imports
+	------------------------------*/
 	import { toggleContactModal, isOverlayOpen } from '$lib/utils/contactForm.js';
 </script>
 
@@ -9,6 +18,7 @@
 	<div
 		class="-rotate-90 pl-77px whitespace-nowrap uppercase flex flex-row items-center gap-2.5 relative z-[11]"
 	>
+		<!-- Sidebar with Open Modal -->
 		{#if $isOverlayOpen}
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -45,6 +55,7 @@
 				Close
 			</p>
 		{:else}
+			<!-- Sidebar with Closed Modal -->
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="26.114"
@@ -76,6 +87,7 @@
 		{/if}
 	</div>
 
+	<!-- Background Hover Element -->
 	<div
 		class="absolute -right-1px left-0 bottom-0 top-full group-hover:top-0 bg-egyptianblue transition-all duration-300 z-10"
 	></div>
