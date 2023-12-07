@@ -81,3 +81,44 @@
 	background-image: url('/images/components/cta/pinstripe.svg');
 	@apply bg-no-repeat bg-center bg-cover;
 }
+
+/* Slider */
+.slider-bg-1 {
+	background-image: url('/images/components/slider/gradient/background-1.png');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.slider-bg-2 {
+	background-image: url('/images/components/slider/gradient/background-2.jpeg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.slider-bg-3 {
+	background-image: url('/images/components/slider/gradient/background-3.jpeg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.slider-bg-4 {
+	background-image: url('/images/components/slider/gradient/background-4.jpeg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.slider-bg-5 {
+	background-image: url('/images/components/slider/gradient/background-5.jpeg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.slider-bg-6 {
+	background-image: url('/images/components/slider/gradient/background-6.jpeg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.slider-bg-7 {
+	background-image: url('/images/components/slider/gradient/background-7.jpeg');
+	@apply bg-no-repeat bg-center bg-cover;
+}
+
+.slider-bg-8 {
+	background-image: url('/images/components/slider/gradient/background-8.jpeg');
+	@apply bg-no-repeat bg-center bg-cover;
+}

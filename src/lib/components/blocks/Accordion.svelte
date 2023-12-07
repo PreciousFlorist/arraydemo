@@ -36,6 +36,7 @@ This component implements an accordion with an embedded carousel and custom curs
 	function handleMouseEnter() {
 		cursorStore.toggle(true);
 		cursorStore.updateText(accordion.cursorText); // Set cursor text value
+		cursorStore.updateDirection(false); // Set arrow direction
 	}
 	function handleMouseLeave() {
 		cursorStore.toggle(false);
@@ -45,7 +46,7 @@ This component implements an accordion with an embedded carousel and custom curs
 
 <div class="component-spacing py-[90px]">
 	<!-- Accordion title -->
-	<p class="uppercase font-sans font-semibold text-onyx tracking-1px px-6 lg:px-9 pb-5 1100:px-20">
+	<p class="uppercase font-sans font-semibold text-onyx tracking-1px pb-5 px-6 lg:px-9 1100:px-20">
 		{accordion.title}
 	</p>
 	{#if isValidArray(panels)}

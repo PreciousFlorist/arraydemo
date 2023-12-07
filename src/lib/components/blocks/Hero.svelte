@@ -36,6 +36,7 @@ This component includes the page tile and a video modal that overlays the entire
 	function handleMouseEnter() {
 		cursorStore.toggle(true);
 		cursorStore.updateText(hero.cursorText); // Set cursor text value
+		cursorStore.updateDirection(false); // Set arrow direction
 	}
 	function handleMouseLeave() {
 		cursorStore.toggle(false);

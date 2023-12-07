@@ -4,7 +4,8 @@ const createCursorStore = () => {
 	const { subscribe, set, update } = writable({
 		enabled: false,
 		customCursor: null,
-		text: ''
+		text: '',
+        rotate: false 
 	});
 
 	// Initialize the custom cursor
@@ -32,7 +33,12 @@ const createCursorStore = () => {
 
 	// Update text
 	function updateText(newText) {
-        update(state => ({ ...state, text: newText }));
+		update((state) => ({ ...state, text: newText }));
+	}
+
+	// Update arrow direction
+    function updateDirection(rotate) {
+        update(state => ({ ...state, rotate }));
     }
 
 	// Cleanup
@@ -48,7 +54,8 @@ const createCursorStore = () => {
 		initialize,
 		toggle,
 		destroy,
-		updateText
+		updateText,
+		updateDirection
 	};
 };
 

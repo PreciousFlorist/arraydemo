@@ -1,0 +1,57 @@
+{
+	"subhead": "Who we are",
+	"title": "Let's get real:<br/>meet Array",
+	"buttonText": "Meet the team",
+	"buttonURL": "#meet-the-team",
+	"cursorText": "Spin",
+	"slides": [
+		{
+			"body": "We're not just here for the games, we're here for the championships. (Go team, go!)",
+			"iconURL": "/images/components/slider/icons/win.svg",
+			"iconAlt": "Champion",
+			"background": "/images/components/slider/gradient/background-1.webp"
+		},
+		{
+			"body": "Our superpower is listening. Our secret weapon is honesty.",
+			"iconURL": "/images/components/slider/icons/chat.svg",
+			"iconAlt": "Speech bubbles",
+			"background": "/images/components/slider/gradient/background-2.webp"
+		},
+		{
+			"body": "We believe knowledge is power. We're here to share, educate, and crush your goals.",
+			"iconURL": "/images/components/slider/icons/brain.svg",
+			"iconAlt": "Brain with a lightning bolt",
+			"background": "/images/components/slider/gradient/background-3.webp"
+		},
+		{
+			"body": "We're a female-led business that pushes each other to swim, not sink.",
+			"iconURL": "/images/components/slider/icons/team.svg",
+			"iconAlt": "Teamwork",
+			"background": "/images/components/slider/gradient/background-4.webp"
+		},
+		{
+			"body": "We build partnerships like we build websites—responsive, accessible, and built to evolve.",
+			"iconURL": "/images/components/slider/icons/relationships.svg",
+			"iconAlt": "A computer with a heart",
+			"background": "/images/components/slider/gradient/background-5.webp"
+		},
+		{
+			"body": "We have big hearts for our community and will help foster growth whenever we can. 🙌",
+			"iconURL": "/images/components/slider/icons/community.svg",
+			"iconAlt": "Hands holding a heart",
+			"background": "/images/components/slider/gradient/background-6.webp"
+		},
+		{
+			"body": "We always finish what we start. Winning 48 international awards proves it. 🏆",
+			"iconURL": "/images/components/slider/icons/awards.svg",
+			"iconAlt": "A trophy",
+			"background": "/images/components/slider/gradient/background-7.webp"
+		},
+		{
+			"body": "We can handle the altitude you're going for and aren't afraid to take a leap. (Safety harnesses attached.)",
+			"iconURL": "/images/components/slider/icons/challenge.svg",
+			"iconAlt": "A mountian",
+			"background": "/images/components/slider/gradient/background-8.webp"
+		}
+	]
+}

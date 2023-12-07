@@ -14,11 +14,15 @@ export async function load({ fetch }) {
 	const accordionResponse = await fetch('/sample-data/components/accordion.json');
 	const accordionData = await accordionResponse.json();
 
+	const sliderResponse = await fetch('/sample-data/components/slider.json');
+	const sliderData = await sliderResponse.json();
+
 	return {
 		hero: heroData,
 		contact: contactData,
 		news: newsData,
 		cta: ctaData,
-		accordion: accordionData
+		accordion: accordionData,
+		slider: sliderData
 	};
 }

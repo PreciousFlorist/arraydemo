@@ -9,6 +9,7 @@
 	------------------------------*/
 	let isVisible = false; // Visibility state of the cursor
 	let cursorText; // Default text
+	let rotate = false;
 
 	/*------------------------------
 	# Subscriptions
@@ -16,11 +17,11 @@
 	cursorStore.subscribe((state) => {
 		isVisible = state.enabled;
 		cursorText = state.text;
-
+		rotate = state.rotate;
 	});
 </script>
 
-<div class="cursor pointer-events-none fixed h-[125px] w-[125px] z-[1000]">
+<div class="select-none cursor pointer-events-none fixed h-[125px] w-[125px] z-[1000]">
 	<!-- Custom Cursor Component -->
 	<div
 		class={`flex gap-2.5 h-full w-full justify-center items-center transition-all duration-300 relative -top-[65px] -left-[65px]
@@ -28,7 +29,7 @@
         ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}
 	>
 		<!-- Cursor Icon -->
-		<div class="relative z-10">
+		<div class={`relative z-10 ${rotate ? 'rotate-90' : ''}`}>
 			<img src="/images/assets/cursor/arrow.svg" alt="An arrow" />
 		</div>
 		<!-- Cursor Text -->

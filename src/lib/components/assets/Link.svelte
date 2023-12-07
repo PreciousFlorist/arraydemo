@@ -1,10 +1,17 @@
 <script>
 	/*------------------------------
+	# Imports
+	------------------------------*/
+	import { cursorStore } from '$lib/stores/cursorStore';
+	import CustomCursor from './CustomCursor.svelte';
+
+	/*------------------------------
     # Props
     ------------------------------*/
 	export let url = '#';
 	export let text = 'Link Text';
 	export let color = 'orange'; // default color
+	export let cursorReset = false;
 
 	/*------------------------------
 	# State Toggles
@@ -26,12 +33,27 @@
 
 	// Get the classes based on the selected color
 	const selectedColor = colorClasses[color] || colorClasses.orange;
+
+	// Exempt link from custom cursor
+	function showDefaultCursor() {
+		if (cursorReset) {
+			cursorStore.toggle(false);
+		}
+	}
+
+	function showCustomCursor() {
+		if (cursorReset) {
+			cursorStore.toggle(true);
+		}
+	}
 </script>
 
 <!-- Link Component -->
 <a
 	href={url}
 	class="flex items-center w-fit gap-2.5 relative py-[8px] {selectedColor.afterClass} after:absolute after:h-1px after:bottom-0 after:left-0 after:w-full after:z-[1] {selectedColor.beforeClass} before:absolute before:h-1px before:bottom-0 before:left-0 before:w-[18px] before:z-[2] before:transition-all before:duration-300 hover:before:w-full"
+	on:mouseenter={showDefaultCursor}
+	on:mouseleave={showCustomCursor}
 >
 	<!-- Arrow Icon -->
 	<svg

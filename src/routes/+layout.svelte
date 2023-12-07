@@ -26,7 +26,6 @@
 		const { default: CustomCursorClass } = await import('custom-cursor.js');
 		const options = {
 			hideTrueCursor: false,
-			focusElements: ['.accordion-panel']
 		};
 		cursorStore.initialize(CustomCursorClass, options);
 		cursorStore.toggle(false); // Initially disable the cursor
