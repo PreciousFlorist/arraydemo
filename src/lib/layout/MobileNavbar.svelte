@@ -109,7 +109,7 @@ This component creates a responsive header for mobile devices, features navigati
 						<!-- Standard Links -->
 						{#if link.type === 'link'}
 							<li class="py-2.5">
-								<a class="text-jet text-[19px] font-semibold uppercase tracking-1px" href={link.url}
+								<a class="text-jet text-xl font-semibold uppercase tracking-1px" href={link.url}
 									>{link.title}</a
 								>
 							</li>
@@ -118,7 +118,7 @@ This component creates a responsive header for mobile devices, features navigati
 						{:else if link.type === 'dropdown'}
 							<li class=" py-2.5">
 								<button
-									class="cursor-pointer text-jet text-[19px] font-semibold uppercase tracking-1px"
+									class="cursor-pointer text-jet text-xl font-semibold uppercase tracking-1px"
 									on:click={() => toggleSubmenu(index)}>{link.title} +</button
 								>
 							</li>
@@ -132,7 +132,7 @@ This component creates a responsive header for mobile devices, features navigati
 		<!-- Search -->
 		<div class="border-t border-b border-silver flex h-[64px] z-40">
 			<input
-				class="grow pl-[24px] text-[18px] tracking-1px font-light"
+				class="grow pl-[24px] text-lg tracking-1px font-light"
 				type="text"
 				placeholder="Search our site"
 			/>

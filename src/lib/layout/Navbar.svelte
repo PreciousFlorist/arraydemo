@@ -42,7 +42,6 @@ The website's header, featuring logo, navigation links, social media links, and 
 		<ul class="flex flex-row">
 			{#if isValidArray(navigationLinks)}
 				{#each navigationLinks as link}
-				
 					<!-- Standard links -->
 					{#if link.type === 'link'}
 						<li
@@ -84,14 +83,14 @@ The website's header, featuring logo, navigation links, social media links, and 
 									>
 										<div class="flex flex-col gap-15px">
 											{#if link.dropdownContent.header.title}
-												<p class="capitalize font-serif text-[22px] 1100:text-[28px] leading-10">
+												<p class="capitalize font-serif text-2xl 1100:text-3xl leading-10">
 													{link.dropdownContent.header.title}
 												</p>
 											{/if}
 											<div>
 												{#if link.dropdownContent.header.description}
 													<p
-														class="capitalize mb-8 text-[17px] 1100:text-[22px] font-light leading-8"
+														class="capitalize mb-8 font-light leading-8 text-base 1100:text-2xl"
 													>
 														{link.dropdownContent.header.description}
 													</p>
@@ -133,7 +132,7 @@ The website's header, featuring logo, navigation links, social media links, and 
 												{/if}
 												{#if cell.title}
 													<p
-														class={`font-sans text-center relative z-10 transition-colors duration-300 text-[14px] 1100:text-[16px] group-hover/cell:text-white max-w-180px ${
+														class={`font-sans text-center relative z-10 transition-colors duration-300 text-sm 1100:text-base group-hover/cell:text-white max-w-180px ${
 															link.dropdownContent.items && link.dropdownContent.items.length >= 6
 																? ''
 																: 'whitespace-nowrap'

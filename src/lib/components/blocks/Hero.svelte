@@ -47,7 +47,7 @@ This component includes the page tile and a video modal that overlays the entire
 <div class="component-spacing pt-[64px] 950:pt-20 flex flex-col overflow-hidden">
 	{#if hero.header}
 		<h1
-			class="font-serif text-onyx text-[30px] leading-[50px] lg:text-[34px] xl:text-[36px] mx-6 lg:mx-9 1100:mx-20 py-10 lg:py-20 800:max-w-[65vw] xl:max-w-[800px]"
+			class="font-serif text-onyx text-3xl leading-snug lg:text-[34px] xl:text-[38px] mx-6 lg:mx-9 1100:mx-20 py-10 lg:py-20 800:max-w-[65vw] xl:max-w-[800px]"
 		>
 			{hero.header}
 		</h1>
@@ -55,7 +55,7 @@ This component includes the page tile and a video modal that overlays the entire
 
 	{#if hero.videoSrc}
 		<div
-			class="aspect-video min-h-[450px] max-h-[825px] relative 800:-right-[1px] lg:ml-9 1100:ml-20 flex-grow"
+			class="aspect-video min-h-[450px] max-h-[825px] relative xl:-right-[1px] lg:ml-9 1100:ml-20 flex-grow"
 			role="presentation"
 		>
 			<!-- Arrow -->
@@ -85,12 +85,12 @@ This component includes the page tile and a video modal that overlays the entire
 				role="presentation"
 			>
 				<div
-					class="lg:after:hidden after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:h-[55px] after:w-[55px] after:absolute after:z-50 after:backdrop-blur after:bg-white after:opacity-20"
+					class="lg:after:hidden after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:h-[55px] after:w-[55px] after:absolute after:z-40 after:backdrop-blur after:bg-white after:opacity-20"
 				>
 					<img
 						src="/images/assets/hero/play-video.svg"
 						alt="Play video"
-						class="lg:hidden w-[16px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-50 opacity-100"
+						class="lg:hidden w-[16px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-40 opacity-100"
 					/>
 				</div>
 			</div>

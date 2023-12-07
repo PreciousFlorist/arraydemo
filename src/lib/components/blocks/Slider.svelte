@@ -187,7 +187,7 @@
 
 			<!-- Header Content -->
 			<div
-				class="flex flex-col justify-center sm:gap-9 absolute z-30 px-6 lg:px-9 1100:px-20 h-full w-full bottom-0 1400:py-16 1400:justify-between max-sm:pb-10 1400:gap-2.5"
+				class="flex flex-col justify-center absolute z-30 px-6 lg:px-9 sm:gap-9 w-full 1400:w-fit 1100:px-20 h-full  bottom-0 1400:py-16 1400:justify-between max-sm:pb-10 1400:gap-2.5"
 			>
 				<!-- Subheader -->
 				{#if slider.subhead}
@@ -198,7 +198,7 @@
 				<!-- Title -->
 				{#if slider.title}
 					<p
-						class="relative z-10 capitalize font-serif tracking-1px text-white text-[35px] leading-[45px] lg:text-[48px] lg:leading-[55px]"
+						class="relative z-10 w-fit capitalize font-serif tracking-1px text-white text-4xl leading-[45px] lg:text-5xl lg:leading-[55px]"
 					>
 						{@html slider.title}
 					</p>

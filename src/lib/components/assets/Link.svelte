@@ -86,7 +86,7 @@
 
 	<!-- Link Text -->
 	<p
-		class="uppercase font-semibold font-sans text-[15px] 900:text-[16px] tracking-1px relative top-1px {selectedColor.textClass}"
+		class="uppercase font-semibold font-sans 900:text-base tracking-1px relative top-1px {selectedColor.textClass}"
 	>
 		{text}
 	</p>

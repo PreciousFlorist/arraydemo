@@ -73,7 +73,7 @@ This component includes a contact form that overlays the entire screen.
 
 <!-- Contact Form Modal -->
 <div
-	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll component-spacing pt-[63px] 950:pt-20 z-30 transition-all duration-200 ${
+	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll component-spacing pt-[63px] 950:pt-20 z-40 transition-all duration-200 ${
 		$isOverlayOpen
 			? 'opacity-1 visible pointer-events-auto'
 			: 'opacity-0 invisible pointer-events-none'
@@ -105,7 +105,7 @@ This component includes a contact form that overlays the entire screen.
 				<div class="800:hidden flex w-fit ml-auto mb-6 sm:mb-12">
 					<button
 						on:click={toggleContactModal}
-						class="uppercase text-white flex items-center gap-1 text-[12px] tracking-1px"
+						class="uppercase text-white flex items-center gap-1 text-xs tracking-1px"
 					>
 						<p class="relative top-1px">Close</p>
 
@@ -116,9 +116,9 @@ This component includes a contact form that overlays the entire screen.
 				<div class="flex flex-col xl:flex-row gap-10 xl:gap-y-20">
 					
 					<!-- Slide content -->
-					<div class="xl:basis-340px 900:min-w-320px">
-						<p class="primary-heading text-white mb-2.5">{slides[currentSlideIndex].title}</p>
-						<p class="text-[22px] text-white font-sans font-extralight font-ballance">
+					<div class="xl:basis-340px 900:min-w-320px xl:min-w-[290px] 1400:min-w-[350px] flex flex-col gap-3 1400:gap-5">
+						<p class="text-5xl xl:text-4xl 1400:text-5xl text-white font-serif mb-2.5">{slides[currentSlideIndex].title}</p>
+						<p class="text-2xl text-white font-sans font-extralight font-ballance">
 							{slides[currentSlideIndex].description}
 						</p>
 					</div>

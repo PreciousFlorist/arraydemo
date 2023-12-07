@@ -59,7 +59,7 @@ The website's footer, including the company logo, products, contact information,
 		<!-- Contact & CTA -->
 		<div class="flex flex-row flex-wrap border-t-0 border-b 800:border-t border-silver">
 			<div
-				class="w-full 1200:w-1/2 py-5 px-6 800:py-12 800:pl-14 border-b 1200:border-b-0 border-silver flex flex-col items-center 800:items-start"
+				class="w-full 1200:w-1/2 py-5 px-6 800:py-12 800:pl-14 border-b 1200:border-b-0 border-silver flex flex-col gap-y-5 items-center 800:items-start"
 			>
 				{#if isValidObject(logo) && logo.image && logo.alt}
 					<div class="800:hidden w-fit">
@@ -70,7 +70,7 @@ The website's footer, including the company logo, products, contact information,
 				{#if isValidObject(cta)}
 					{#if cta.text}
 						<p
-							class="font-serif text-onyx text-22px 800:text-[35px] mb-5 max-w-[530px] text-center 800:text-left font-light"
+							class="font-serif text-onyx text-22px 800:text-4xl 800:leading-snug  max-w-[530px] text-center 800:text-left font-light"
 						>
 							{cta.text}
 						</p>
@@ -110,10 +110,10 @@ The website's footer, including the company logo, products, contact information,
 			>
 				{#if isValidObject(tos)}
 					{#if tos.acknowledgement}
-						<p class="text-[14px] text-onyx font-light mb-2.5">{tos.acknowledgement}</p>
+						<p class="text-sm text-onyx font-light mb-2.5">{tos.acknowledgement}</p>
 					{/if}
 					{#if tos.terms}
-						<p class="text-[14px] text-onyx font-light">{@html tos.terms}</p>
+						<p class="text-sm text-onyx font-light">{@html tos.terms}</p>
 					{/if}
 				{/if}
 			</div>

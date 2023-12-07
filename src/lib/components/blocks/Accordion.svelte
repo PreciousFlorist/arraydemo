@@ -130,7 +130,7 @@ This component implements an accordion with an embedded carousel and custom curs
 															{/if}
 															{#if project.bio}
 																<p
-																	class="font-serif font-light xl:max-w-[45vw] tracking-1px text-2xl lg:text-3xl xl:leading-[63px] xl:text-[48px] xl:text-white"
+																	class="font-serif font-light xl:max-w-[45vw] tracking-1px text-2xl lg:text-3xl xl:leading-[63px] xl:text-5xl xl:text-white"
 																>
 																	{project.bio}
 																</p>
