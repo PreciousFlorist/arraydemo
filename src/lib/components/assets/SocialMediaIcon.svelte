@@ -5,12 +5,15 @@
 	export let image;
 	export let alt;
 	export let link;
+	export let white = true;
 	export let size = 'default';
 </script>
 
 <a
 	href={link}
-	class="group cursor-pointer flex justify-center items-center w-full h-full relative overflow-hidden after:absolute after:bg-whitesmoke after:h-full after:top-full after:bottom-0 after:right-0 after:left-0 after:transition-all after:duration-300 hover:after:top-0"
+	class={`group cursor-pointer flex justify-center items-center w-full h-full relative overflow-hidden after:absolute after:h-full after:top-full after:bottom-0 after:right-0 after:left-0 after:transition-all after:duration-300 hover:after:top-0  ${
+		white ? 'after:bg-whitesmoke' : 'after:bg-white'
+	}`}
 >
 	<!-- Social Media Icon & Hover States -->
 	<img

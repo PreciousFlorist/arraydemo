@@ -27,7 +27,6 @@ The website's footer, including the company logo, products, contact information,
 
 <footer class="component-spacing py-7 bg-whitesmoke">
 	<div class="border-y border-silver grid grid-cols-1 auto-rows-auto">
-
 		<!-- Products -->
 		<div
 			class="flex items-center justify-between py-5 px-6 800:px-14 row-start-3 800:row-start-1 border-t 800:border-t-0 border-silver"
@@ -95,6 +94,7 @@ The website's footer, including the company logo, products, contact information,
 								image={social.image}
 								alt={social.alt}
 								link={social.url}
+								white={false}
 								size="large"
 							/>
 						</div>
