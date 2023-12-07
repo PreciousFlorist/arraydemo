@@ -6,6 +6,7 @@
 			"heading": "Marketing Strategy & Ad Campaigns",
 			"body": "Helping you reach your market in the right places, in the right way. Let's maximize your brand's visibility through targeted strategies tailored to your unique goals.",
 			"buttonText": "CREATE A MARKETING STRATEGY",
+			"buttonSmText": "View all case studies",
 			"buttonURL": "#create",
 			"caseStudy": [
 				{
@@ -27,7 +28,8 @@
 			"heading": "Brand Strategy & Development",
 			"body": "Telling a brand story that goes beyond logo design. Foster deeper connections and build brand loyalty with your ideal consumer.",
 			"buttonText": "BUILD A STRONGER BRAND",
-			"buttonURL": "#build",
+			"buttonSmText": "View all case studies",
+			"buttonURL":"#build",
 			"caseStudy": [
 				{
 					"title": "Vancouver Island North Tourism",
@@ -49,7 +51,8 @@
 			"heading": "Website Design & Development",
 			"body": "Custom WordPress & Shopify Websites made for your target audience. Our user-friendly designs enhance engagement and drive conversions.",
 			"buttonText": "EXPLORE WEB DESIGN & DEVELOPMENT",
-			"buttonURL": "#explore",
+			"buttonSmText": "View all case studies",
+			"buttonURL":"#explore",
 			"caseStudy": [
 				{
 					"title": "Emergency Management Cowichan",
@@ -71,7 +74,8 @@
 			"heading": "SEO, Social Media & Digital Marketing",
 			"body": "Increase your ROI with targeted PPC & SEO Strategies. Our data-driven approach ensures your marketing efforts are optimized.",
 			"buttonText": "DISCOVER DIGITAL MARKETING",
-			"buttonURL": "#discover",
+			"buttonSmText": "View all case studies",
+			"buttonURL":"#discover",
 			"caseStudy": [
 				{
 					"title": "Northfield Dental Clinic",
@@ -92,7 +96,8 @@
 			"heading": "Graphic Design & Print Design",
 			"body": "From business cards to billboards—let your brand shine with marketing touchpoints that make you stand out.",
 			"buttonText": "ENHANCE YOUR BRAND ASSETS",
-			"buttonURL": "#enhance",
+			"buttonSmText": "View all case studies",
+			"buttonURL":"#enhance",
 			"caseStudy": [
 				{
 					"title": "Shift",
@@ -114,7 +119,8 @@
 			"heading": "Content Design & Copywriting",
 			"body": "Content is king. Put the right word forward with clear and persuasive copy that turns prospective buyers into loyal customers.",
 			"buttonText": "GET PERSUASIVE COPY",
-			"buttonURL": "#copy",
+			"buttonSmText": "View all case studies",
+			"buttonURL":"#copy",
 			"caseStudy": [
 				{
 					"title": "Breze Aveda Concept Salon & Day Spa",

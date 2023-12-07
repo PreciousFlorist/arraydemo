@@ -96,7 +96,7 @@ This component implements an accordion with an embedded carousel and custom curs
 							</div>
 
 							<div class="block lg:hidden">
-								<Link url={panel.buttonURL} text="View all case studies" color="blue" />
+								<Link url={panel.buttonURL} text={panel.buttonSmText} color="blue" />
 							</div>
 						</div>
 
@@ -119,8 +119,7 @@ This component implements an accordion with an embedded carousel and custom curs
 													<div class="flex flex-col h-[600px] relative">
 														<!-- Slide header & Bio -->
 														<div
-															class="xl:h-full xl:absolute z-10 flex flex-col gap-2.5 w-full bg-white
-														xl:bg-transparent xl:justify-end p-6 xl:p-12 top-0 left-0 transition-all duration-300 backdrop-blur xl:opacity-0 group-hover:opacity-100"
+															class="xl:h-full xl:absolute z-20 flex flex-col gap-2.5 w-full bg-white xl:bg-transparent xl:justify-end p-6 xl:p-12 top-0 left-0 transition-all duration-300 backdrop-blur xl:opacity-0 group-hover:opacity-100"
 														>
 															{#if project.title}
 																<p
@@ -139,7 +138,7 @@ This component implements an accordion with an embedded carousel and custom curs
 														</div>
 														<!-- Background Overlay -->
 														<div
-															class="invisible xl:visible absolute z-[9] top-0 left-0 w-full h-full transition-all duration-300 opacity-0 group-hover:opacity-[37%]"
+															class="invisible xl:visible absolute z-10 top-0 left-0 w-full h-full transition-all duration-300 opacity-0 group-hover:opacity-[37%]"
 															style={`background-color: ${project.background}`}
 														></div>
 

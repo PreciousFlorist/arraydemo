@@ -124,14 +124,11 @@
 	>
 		<!-- Header -->
 		<div
-			class="
-        relative flex max-1400:flex-col max-1400:items-center
-        1400:min-w-[710px] 1400:w-[47%] 1400:h-[800px]
-        "
+			class=" relative flex max-1400:flex-col max-1400:items-center 1400:min-w-[710px] 1400:w-[47%] 1400:h-[800px]"
 		>
 			<!-- Background Banner -->
 			<div
-				class="max-1400:z-10 max-1400:w-full max-1400:h-fit max-1400:top-0 max-1400:left-0 max-1400:flex max-1400:flex-row max-1400:justify-center max-1400:items-stretch"
+				class="z-20 max-1400:w-full max-1400:h-fit max-1400:top-0 max-1400:left-0 max-1400:flex max-1400:flex-row max-1400:justify-center max-1400:items-stretch"
 			>
 				<!-- Banner left -->
 				<div class=" bg-onyx flex-grow 1400:hidden"></div>
@@ -140,7 +137,7 @@
 					viewBox="0 0 390 304.861"
 					class="
                     max-1400:w-[390px] min-w-[390px]
-                    1400:z-[2] 1400:object-cover 1400:w-[113%] 1400:h-full 1400:-rotate-90 1400:absolute 1400:right-0 1400:top-0
+                    1400:z-20 1400:object-cover 1400:w-[113%] 1400:h-full 1400:-rotate-90 1400:absolute 1400:right-0 1400:top-0
                     "
 				>
 					<path
@@ -157,7 +154,7 @@
 			<!-- Reel and thumbnail assets -->
 			<div
 				class="
-                absolute select-none pointer-events-none z-[1] -bottom-[150px] 500:-bottom-[185px] 580:-bottom-[210px] lg:w-[525px] lg:h-[525px]
+                absolute select-none pointer-events-none z-10 -bottom-[150px] 500:-bottom-[185px] 580:-bottom-[210px] lg:w-[525px] lg:h-[525px]
                 1400:w-[525px] 1400:h-[525px] 1400:-rotate-90 1400:top-1/2 1400:-translate-y-1/2 1400:-right-[25px]
                 "
 			>
@@ -190,10 +187,7 @@
 
 			<!-- Header Content -->
 			<div
-				class="
-                flex flex-col justify-center sm:gap-9 absolute z-10 px-6 lg:px-9 1100:px-20 h-full w-full bottom-0
-                1400:py-16 1400:justify-between max-sm:pb-10 1400:gap-2.5
-                "
+				class="flex flex-col justify-center sm:gap-9 absolute z-30 px-6 lg:px-9 1100:px-20 h-full w-full bottom-0 1400:py-16 1400:justify-between max-sm:pb-10 1400:gap-2.5"
 			>
 				<!-- Subheader -->
 				{#if slider.subhead}

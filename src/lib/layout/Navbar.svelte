@@ -29,7 +29,7 @@ The website's header, featuring logo, navigation links, social media links, and 
 </script>
 
 <header
-	class="hidden 950:flex fixed w-full flex-row justify-between items-center pl-20 border-b border-silver backdrop-blur z-20 after:absolute after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80"
+	class="hidden 950:flex fixed w-full flex-row justify-between items-center pl-20 border-b border-silver backdrop-blur z-50 after:absolute after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80"
 >
 	<!-- Logo -->
 	<div class="relative z-30">

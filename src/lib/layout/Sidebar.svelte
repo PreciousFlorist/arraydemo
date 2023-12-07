@@ -12,11 +12,11 @@ Fixed to the left of the screen, this component triggers the opeing and closing 
 </script>
 
 <button
-	class="fixed h-full w-14 1100:w-20 border-r border-silver mt-[63px] 950:mt-77px backdrop-blur hidden 800:flex justify-center items-center group z-[11] after:absolute after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80"
+	class="fixed h-full w-14 1100:w-20 border-r border-silver mt-[63px] 950:mt-77px backdrop-blur hidden 800:flex justify-center items-center group z-40 after:absolute after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80"
 	on:click={toggleContactModal}
 >
 	<div
-		class="-rotate-90 pl-77px whitespace-nowrap uppercase flex flex-row items-center gap-2.5 relative z-[11]"
+		class="-rotate-90 pl-77px whitespace-nowrap uppercase flex flex-row items-center gap-2.5 relative z-40"
 	>
 		<!-- Sidebar with Open Modal -->
 		{#if $isOverlayOpen}
