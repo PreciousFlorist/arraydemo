@@ -62,7 +62,7 @@ This component creates a responsive header for mobile devices, features navigati
 </script>
 
 <header
-	class="950:hidden fixed w-full flex flex-row justify-between items-center top-0 z-20 pl-[24px] h-[64px] border-b border-silver backdrop-blur after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80 after:absolute"
+	class="950:hidden fixed w-full flex z-50 flex-row justify-between items-center top-0 pl-[24px] h-[64px] border-b border-silver backdrop-blur after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80 after:absolute"
 >
 	<!-- Logo -->
 	<div class="relative z-30">
