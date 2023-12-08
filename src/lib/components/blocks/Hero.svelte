@@ -44,7 +44,7 @@ This component includes the page tile and a video modal that overlays the entire
 	}
 </script>
 
-<div class="component-spacing pt-[64px] 950:pt-20 flex flex-col overflow-hidden">
+<div class="component-spacing pt-16 950:pt-20 flex flex-col overflow-hidden">
 	{#if hero.header}
 		<h1
 			class="font-serif text-onyx text-3xl leading-snug lg:text-[34px] xl:text-[38px] mx-6 lg:mx-9 1100:mx-20 py-10 lg:py-20 800:max-w-[65vw] xl:max-w-[800px]"
@@ -55,14 +55,14 @@ This component includes the page tile and a video modal that overlays the entire
 
 	{#if hero.videoSrc}
 		<div
-			class="aspect-video min-h-[450px] max-h-[825px] relative xl:-right-[1px] lg:ml-9 1100:ml-20 flex-grow"
+			class="aspect-video min-h-[450px] max-h-[825px] relative xl:-right-px lg:ml-9 1100:ml-20 flex-grow"
 			role="presentation"
 		>
 			<!-- Arrow -->
 			<img
 				src="/images/assets/hero/arrow.svg"
 				alt="arrow"
-				class="absolute z-30 right-0 top-0 -translate-y-[25%] 800:-translate-y-1/2 w-[calc(100px+15vw)]"
+				class="absolute z-30 right-0 top-0 -translate-y-1/4 800:-translate-y-1/2 w-[calc(100px+15vw)]"
 			/>
 			<!-- Video -->
 			<video
@@ -85,12 +85,12 @@ This component includes the page tile and a video modal that overlays the entire
 				role="presentation"
 			>
 				<div
-					class="lg:after:hidden after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:h-[55px] after:w-[55px] after:absolute after:z-40 after:backdrop-blur after:bg-white after:opacity-20"
+					class="lg:after:hidden after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:h-14 after:w-14 after:absolute after:z-40 after:backdrop-blur after:bg-white after:opacity-20"
 				>
 					<img
 						src="/images/assets/hero/play-video.svg"
 						alt="Play video"
-						class="lg:hidden w-[16px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-40 opacity-100"
+						class="ml-0.5 lg:hidden w-4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute z-40 opacity-100"
 					/>
 				</div>
 			</div>

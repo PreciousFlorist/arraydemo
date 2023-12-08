@@ -21,10 +21,10 @@
 	});
 </script>
 
-<div class="select-none cursor pointer-events-none fixed h-[125px] w-[125px] z-[1000]">
+<div class="select-none cursor pointer-events-none fixed h-32 w-32 z-[1000]">
 	<!-- Custom Cursor Component -->
 	<div
-		class={`flex gap-2.5 h-full w-full justify-center items-center transition-all duration-300 relative -top-[65px] -left-[65px]
+		class={`flex gap-2.5 h-full w-full justify-center items-center transition-all duration-300 relative -top-16 -left-16
             after:bg-black after:h-full after:w-full after:opacity-30 after:absolute after:rounded-full after:top-0 after:bottom-0
         ${isVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}
 	>

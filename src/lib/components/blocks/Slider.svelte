@@ -136,7 +136,7 @@
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 390 304.861"
 					class="
-                    max-1400:w-[390px] min-w-[390px]
+                    max-1400:w-96 min-w-96
                     1400:z-20 1400:object-cover 1400:w-[113%] 1400:h-full 1400:-rotate-90 1400:absolute 1400:right-0 1400:top-0
                     "
 				>
@@ -155,7 +155,7 @@
 			<div
 				class="
                 absolute select-none pointer-events-none z-10 -bottom-[150px] 500:-bottom-[185px] 580:-bottom-[210px] lg:w-[525px] lg:h-[525px]
-                1400:w-[525px] 1400:h-[525px] 1400:-rotate-90 1400:top-1/2 1400:-translate-y-1/2 1400:-right-[25px]
+                1400:w-[525px] 1400:h-[525px] 1400:-rotate-90 1400:top-1/2 1400:-translate-y-1/2 1400:-right-6
                 "
 			>
 				<div
@@ -164,7 +164,7 @@
 				>
 					<!-- Thubmnail icon -->
 					<div
-						class=" z-10 rounded-[14px] transition-all duration-300 border border-white absolute w-[53px] h-[56px] top-[333px] right-[184px] lg:w-[59px] lg:h-[70px] lg:top-[417px] lg:right-[233px] bg-no-repeat bg-center bg-cover"
+						class=" z-10 rounded-[14px] transition-all duration-300 border border-white absolute w-[53px] h-14 top-[333px] right-[184px] lg:w-[59px] lg:h-[70px] lg:top-[417px] lg:right-[233px] bg-no-repeat bg-center bg-cover"
 						style={`background-image: url('${slides[currentSlideIndex].background}')`}
 					></div>
 					<!-- Slide Reel -->
@@ -258,7 +258,7 @@
 						{#each slides as _, index}
 							<div
 								class={`bg-white transition duration-300 ${
-									currentSlideIndex === index ? 'h-[3px]' : 'h-[1px]'
+									currentSlideIndex === index ? 'h-[3px]' : 'h-px'
 								}`}
 								style={`width: ${(1 / length) * 100}%; opacity: ${
 									currentSlideIndex === index ? '1' : '0.5'

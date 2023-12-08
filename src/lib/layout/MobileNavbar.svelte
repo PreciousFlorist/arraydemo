@@ -62,34 +62,35 @@ This component creates a responsive header for mobile devices, features navigati
 </script>
 
 <header
-	class="950:hidden fixed w-full flex z-50 flex-row justify-between items-center top-0 pl-[24px] h-[64px] border-b border-silver backdrop-blur after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80 after:absolute"
+	class="950:hidden fixed w-full flex z-50 flex-row justify-between items-center top-0 pl-6 h-16 border-b border-silver backdrop-blur after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80 after:absolute"
 >
 	<!-- Logo -->
-	<div class="relative z-30">
-		<img src="/images/array-logo.svg" alt="Array Logo" class="h-43px" />
+	<div class="relative z-30 flex">
+		<img src="/images/array-wordmark-logo.svg" alt="Array Logo" class="h-11" />
+		<img src="/images/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11" />
 	</div>
 	<!-- Hamburger -->
 	<button
-		class="absolute z-30 right-0 p-15px h-full w-[64px] border-l border-silver bg-whitesmoke flex justify-center items-center"
+		class="absolute z-30 right-0 p-15px h-full w-16 border-l border-silver bg-whitesmoke flex justify-center items-center"
 		on:click={toggleMenu}
 	>
 		<div>
 			<span
-				class={`my-[8px] ml-auto h-0.5 w-4 block rounded-full transition-all duration-300 origin-[50%_50%] ${
+				class={`my-2 ml-auto h-0.5 w-4 block rounded-full transition-all duration-300 origin-[50%_50%] ${
 					active
-						? 'translate-y-[10px] -translate-x-[0px] w-7 rotate-[135deg] bg-egyptianblue'
+						? 'translate-y-[10px] -translate-x-0 w-7 rotate-[135deg] bg-egyptianblue'
 						: 'bg-jet'
 				} `}
 			></span>
 			<span
-				class={`my-[8px] ml-auto h-0.5 w-7 block rounded-full transition-all duration-300 origin-[50%_50%] ${
+				class={`my-2 ml-auto h-0.5 w-7 block rounded-full transition-all duration-300 origin-[50%_50%] ${
 					active ? 'scale-0' : 'bg-jet'
 				}`}
 			></span>
 			<span
-				class={`my-[8px] ml-auto h-0.5 w-4 block rounded-full transition-all duration-300 origin-[50%_50%] ${
+				class={`my-2 ml-auto h-0.5 w-4 block rounded-full transition-all duration-300 origin-[50%_50%] ${
 					active
-						? '-translate-y-[10px] -translate-x-[0px] w-7 -rotate-[135deg] bg-egyptianblue'
+						? '-translate-y-[10px] -translate-x-0 w-7 -rotate-[135deg] bg-egyptianblue'
 						: 'bg-jet'
 				} `}
 			></span>
@@ -104,7 +105,7 @@ This component creates a responsive header for mobile devices, features navigati
 		<div class="flex z-40">
 			<!-- Page Links -->
 			{#if isValidArray(navigationLinks)}
-				<ul class="pl-[24px] py-5 grow">
+				<ul class="pl-6 py-5 grow">
 					{#each navigationLinks as link, index}
 						<!-- Standard Links -->
 						{#if link.type === 'link'}
@@ -127,16 +128,16 @@ This component creates a responsive header for mobile devices, features navigati
 				</ul>
 			{/if}
 
-			<div class="w-[64px] border-l border-silver"></div>
+			<div class="w-16 border-l border-silver"></div>
 		</div>
 		<!-- Search -->
-		<div class="border-t border-b border-silver flex h-[64px] z-40">
+		<div class="border-t border-b border-silver flex h-16 z-40">
 			<input
-				class="grow pl-[24px] text-lg tracking-1px font-light"
+				class="grow pl-6 text-lg tracking-1px font-light"
 				type="text"
 				placeholder="Search our site"
 			/>
-			<div class="w-[64px] flex justify-center items-center">
+			<div class="w-16 flex justify-center items-center">
 				<img src="/images/search-icon.svg" alt="Search" class="cursor-pointer" />
 			</div>
 		</div>
@@ -144,7 +145,7 @@ This component creates a responsive header for mobile devices, features navigati
 		{#if isValidArray(cta)}
 			{#each cta as banner}
 				<div
-					class={`py-10 z-40 px-[24px] flex flex-col justify-center items-center ${banner.background}`}
+					class={`py-10 z-40 px-6 flex flex-col justify-center items-center ${banner.background}`}
 				>
 					<p class="font-serif text-white text-4xl mb-6 text-center">{banner.title}</p>
 					<Button text={banner.buttonText} onClick={openContactModal} />
@@ -167,7 +168,7 @@ This component creates a responsive header for mobile devices, features navigati
 						bind:this={submenuElements[index]}
 						class="absolute z-40 w-full h-[calc(100vh-64px)] top-0 bg-white border-b border-silver left-full overflow-scroll"
 					>
-						<div class="py-4 px-[24px] flex justify-between border-b border-silver">
+						<div class="py-4 px-6 flex justify-between border-b border-silver">
 							<!-- Submenu Title -->
 							<p class="uppercase tracking-1px text-lg font-bold text-arraygray">{link.title}</p>
 							<!-- Close Submenu -->
@@ -183,7 +184,7 @@ This component creates a responsive header for mobile devices, features navigati
 						<ul class="grid grid-cols-2">
 							{#each link.dropdownContent.items as item}
 								<li
-									class="border-b border-r border-silver px-[24px] p-5 flex flex-col gap-2.5 justify-center items-center"
+									class="border-b border-r border-silver px-6 p-5 flex flex-col gap-2.5 justify-center items-center"
 								>
 									<!-- Link Icon -->
 									<img src={item.image} alt={item.alt} class="w-16 relative" />
@@ -200,7 +201,7 @@ This component creates a responsive header for mobile devices, features navigati
 
 						<!-- Background -->
 						<div
-							class={`py-10 px-[24px] flex flex-col gap-2 ${link.dropdownContent.background} bg-cover`}
+							class={`py-10 px-6 flex flex-col gap-2 ${link.dropdownContent.background} bg-cover`}
 						>
 							<p class="font-serif text-white text-3xl tracking-1px">{link.cta.title}</p>
 							<p class="font-sans text-white text-base tracking-1px font-light">

@@ -19,7 +19,7 @@ This component displays a grid of news items, with a header, button, and backgro
 	let cards = news.cards || [];
 </script>
 
-<div class="component-spacing py-[90px]">
+<div class="component-spacing py-20">
 	<!-- News Grid Component -->
 	<div
 		class="border-y border-silver flex flex-col 800:flex-row justify-between gap-5 items-start 800:items-center p-9"

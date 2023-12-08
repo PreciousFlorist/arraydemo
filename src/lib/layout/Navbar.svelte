@@ -32,8 +32,9 @@ The website's header, featuring logo, navigation links, social media links, and 
 	class="hidden 950:flex fixed w-full flex-row justify-between items-center pl-20 border-b border-silver backdrop-blur z-50 after:absolute after:w-full after:h-full after:bg-white after:top-0 after:left-0 after:opacity-80"
 >
 	<!-- Logo -->
-	<div class="relative z-30">
-		<img src="/images/array-logo.svg" alt="Array Logo" class="h-43px" />
+	<div class="relative z-30 flex">
+		<img src="/images/array-wordmark-logo.svg" alt="Array Logo" class="h-11" />
+		<img src="/images/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11" />
 	</div>
 
 	<!-- Main Navigation -->
@@ -63,9 +64,7 @@ The website's header, featuring logo, navigation links, social media links, and 
 						${isSearchOpen ? 'opacity-0' : ''}
 						`}
 						>
-							<p
-								class="text-sm 1100:text-base transition-all group-hover/dropdown:text-coral whitespace-nowrap"
-							>
+							<p class="text-sm 1100:text-base group-hover/dropdown:text-coral whitespace-nowrap">
 								{link.title}
 							</p>
 
@@ -89,9 +88,7 @@ The website's header, featuring logo, navigation links, social media links, and 
 											{/if}
 											<div>
 												{#if link.dropdownContent.header.description}
-													<p
-														class="capitalize mb-8 font-light leading-8 text-base 1100:text-2xl"
-													>
+													<p class="capitalize mb-8 font-light leading-8 text-base 1100:text-2xl">
 														{link.dropdownContent.header.description}
 													</p>
 												{/if}
@@ -111,14 +108,14 @@ The website's header, featuring logo, navigation links, social media links, and 
 									<div class={`flex grow flex-wrap bg-cover ${link.dropdownContent.background} `}>
 										{#each link.dropdownContent.items as cell}
 											<div
-												class={`group/cell py-2.5 px-[25px] cursor-pointer flex flex-col justify-center items-center gap-y-3.5 relative overflow-hidden border-b border-l border-silver ${
+												class={`group/cell py-2.5 px-6 cursor-pointer flex flex-col justify-center items-center gap-y-3.5 relative overflow-hidden border-b border-l border-silver ${
 													link.dropdownContent.items && link.dropdownContent.items.length >= 6
 														? 'w-1/3 h-[200px]'
-														: 'w-1/5 h-[255px] 1100:h-[340px]'
+														: 'w-1/5 h-[255px] 1100:h-80'
 												}`}
 											>
 												<div
-													class="absolute bg-white h-full w-[102%] top-0 transition-all duration-300 z-0 group-hover/cell:-translate-y-full py-2.5 px-[25px]"
+													class="absolute bg-white h-full w-[102%] top-0 transition-all duration-300 z-0 group-hover/cell:-translate-y-full py-2.5 px-6"
 												></div>
 
 												{#if cell.image && cell.alt}
@@ -173,7 +170,7 @@ The website's header, featuring logo, navigation links, social media links, and 
 			<ul class="flex flex-row relative z-30 min-h-[77px]">
 				{#each socialLinks as social}
 					{#if social.image && social.alt && social.link}
-						<li class="w-[54px] flex justify-center items-center border-l border-silver">
+						<li class="w-14 flex justify-center items-center border-l border-silver">
 							<SocialMediaIcon image={social.image} alt={social.alt} link={social.link} />
 						</li>
 					{/if}

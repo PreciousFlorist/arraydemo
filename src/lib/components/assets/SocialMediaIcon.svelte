@@ -19,7 +19,8 @@
 	<img
 		src={image}
 		{alt}
-		class="transition-all duration-300 relative z-10 grayscale brightness-50 group-hover:brightness-100 group-hover:grayscale-0"
-		style={`width: ${size === 'large' ? '32px' : '17px'}`}
+		class={`transition-all duration-300 relative z-10 grayscale brightness-50 group-hover:brightness-100 group-hover:grayscale-0 ${
+			size === 'large' ? 'w-8' : 'w-5'
+		}`}
 	/>
 </a>

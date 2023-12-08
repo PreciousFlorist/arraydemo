@@ -44,7 +44,7 @@ This component implements an accordion with an embedded carousel and custom curs
 	}
 </script>
 
-<div class="component-spacing py-[90px]">
+<div class="component-spacing py-20">
 	<!-- Accordion title -->
 	<p class="uppercase font-sans font-semibold text-onyx tracking-1px pb-5 px-6 lg:px-9 1100:px-20">
 		{accordion.title}
@@ -89,7 +89,7 @@ This component implements an accordion with an embedded carousel and custom curs
 						<div
 							class="lg:w-[45%] h-full p-6 pb-8 lg:p-12 1100:pl-20 border-t border-r border-silver flex flex-col gap-7 justify-between"
 						>
-							<p class="font-sans text-arraygray leading-[1.5] font-light text-2xl">{panel.body}</p>
+							<p class="font-sans text-arraygray leading-normal font-light text-2xl">{panel.body}</p>
 
 							<div class="hidden lg:block">
 								<Link url={panel.buttonURL} text={panel.buttonText} color="blue" />

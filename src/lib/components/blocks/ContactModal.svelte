@@ -73,7 +73,7 @@ This component includes a contact form that overlays the entire screen.
 
 <!-- Contact Form Modal -->
 <div
-	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll component-spacing pt-[63px] 950:pt-20 z-40 transition-all duration-200 ${
+	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll component-spacing pt-16 950:pt-20 z-40 transition-all duration-200 ${
 		$isOverlayOpen
 			? 'opacity-1 visible pointer-events-auto'
 			: 'opacity-0 invisible pointer-events-none'

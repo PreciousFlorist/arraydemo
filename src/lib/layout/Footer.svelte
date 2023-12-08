@@ -120,7 +120,7 @@ The website's footer, including the company logo, products, contact information,
 
 			<!-- Payment Methods -->
 			<div
-				class="w-full 800:w-1/2 border-b 800:border-b-0 1200:border-l border-silver flex flex-wrap 1400:basis-[650px] justify-between items-center py-5 px-6 800:pl-[50px] 800:pr-14"
+				class="w-full 800:w-1/2 border-b 800:border-b-0 1200:border-l border-silver flex flex-wrap 1400:basis-[650px] justify-between items-center py-5 px-6 800:pl-12 800:pr-14"
 			>
 				{#if isValidObject(payments)}
 					{#if payments.methods}
