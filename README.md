@@ -1,11 +1,13 @@
 
+##### (View the live project here: [https://deluxe-crisp-c6485a.netlify.app/](https://deluxe-crisp-c6485a.netlify.app/))
+
 # *Wait, who even are you?*
 
-My name is Shane! I'm a web developer with 6 years of experience working on frontend and backend environments, with much of it spent working with PHP, SASS, and WordPress. Right now, I'm working with Briteweb in Vancouver.
+Hi, my name is Shane! I'm a web developer with 6 years of experience working on frontend and backend environments, with much of it spent working with PHP, SASS, and WordPress. Right now, I'm working with Briteweb in Vancouver.
 
 I live right up the road from your office, on Prideaux and Fitz, and have been passing by your office on a daily basis since I moved into town. *(Unrelated, but how neat is that building??)*
 
-So, I've seen you around, keeping up with your socials, and have been checking out your website. I love your design work, and my development background seems to align very well with your product offerings.
+So, I've seen you around, keeping up with your socials and checking out your website. I love your design work, and my development background seems to align very well with your product offerings.
 
 Now, as we're nearing the end of a season, I'm reaching out to connect with you and see what's up - and if there might be some chemistry here. 
 
@@ -53,38 +55,45 @@ The website is made up of these individual components:
 |Contact Modal|Mobile Navbar|Link|
 |Accordion|Sidebar|Custom Cursor|
 |Slider|Footer|Social Media Icons|
-|Call to Action|`src/lib/layout`|`s/lib/components/assets`|
+|Call to Action|`src/lib/layout`|`src/lib/components/assets`|
 |News Grid|
 |`src/lib/components/blocks`|
 
 The project was developed with a WordPress context in mind. The idea is that, with minimal tweaking, the local sample data could be replaced with a GraphQL, and the app could conditionally render pages and blocks from an actual CMS.
 
+## *Love it. Want it. Need it. Where can I see the whole thing?*
 
-### *How can we build this locally?*
+You can open up the project right here: https://deluxe-crisp-c6485a.netlify.app/
 
-Clone the Repo:
-`git clone https://github.com/PreciousFlorist/arraydemo.git`
+## *Okay! And if we want to open this up locally?*
 
-Install Dependencies:
-`npm install`
+#### Clone the project and install dependencies
 
-You can clone the project here:
-`https://github.com/PreciousFlorist/arraydemo.git`
+```sh
+git clone https://github.com/PreciousFlorist/arraydemo.git
+```
 
-Start the Development Server:
-`npm run dev`
+```sh
+npm i
+```
+#### Run the development server
 
-Build and Preview:
+```sh
+npm run dev
+```
 
-To build the project for production, use:
-`npm run build``
+#### Build and preview the project
+```sh
+npm run build
+```
 
-After building, you can preview the built site using:
-`npm run preview`
+```sh
+npm run preview
+```
 
-## *Very interesting! But let's talk tough*:
+## *This is all very interesting! But let's talk tough*:
 
-- *Why did you choose this tech-stack?*
+### *Why did you choose this tech-stack?*
 
 Svelte has been on my radar for a while, as it's topped the [State of JS](https://2022.stateofjs.com/en-US/libraries/front-end-frameworks/) charts for a while, and I've been interested in checking it out. So this was just an opportunity to try something new.
 
@@ -92,10 +101,9 @@ I'm familiar with Tailwind, which is also very popular in the [State of CSS](htt
 
 Finally, GSAP is just a favourite animation toolkit of mine. But in this instance, honestly, it's more of a wedge than a wrench. Svelte has a number of built-in animation tools that render this library a bit redundant. So, if I had given myself more time to turn this project around, I probably would have removed it completely.
 
-
 ![What do you do here?](https://assets-global.website-files.com/5905ea3c9086586eadd9a253/642ef38047d776e4e678b604_DfwDvNmMWIGY1Yo1Yv5tuHhMtCrhRF1Dy_GTpmwQqun_evL1EUgEAfcVd3JICLflfj_1mKms50Uizm9-V8Aw4KDGGOMvaWvvy3FS2-xj7t3jUBnYLK6X5OcnFDknznuap02gIlvOTNu199wr0rz2JJs.gif)
 
-- *What gave you trouble?*
+### *What gave you trouble?*
 
 I hugely overestimated the number (and quality) of resources available for SvelteKit. Tools that are usually readily available for PHP or React are often incompatible (looking at you *Swiper.js*), do not exist (responsive image generators), or I just couldn't find them.
 
@@ -105,7 +113,7 @@ But once I started working on the more complex Reel slider, splide just couldn't
 
 Otherwise, I generally underestimated the complexity of this single page. I started developing the Accordion early on because I thought it would be straightforward, but I was shocked to see that each panel included a carousel and custom cursor toggles.
 
-- *I notice that there are some bugs, and that you didn't match all characteristics of the design. What's up with that?*
+### *I notice that there are some bugs, and that you didn't match all characteristics of the design. What's up with that?*
 
 There are several known issues here, and this is not representative of a finished product. It was developed using a Chromium browser and has not been optimized for Safari or Firefox. So there are several CSS bugs, mostly affecting class transition.
 
@@ -115,7 +123,7 @@ There are several known issues here, and this is not representative of a finishe
 
 Otherwise, yes, there are variances in font sizes, breakpoints, and addition to many other values. I view this project as a proof-of-concept, and I hope that you might as well.
 
-- *Would you recommend this toolset for future projects?*
+### *Would you recommend this toolset for future projects?*
 
 SvelteKit is great! Very intuitive, and they make it very easy to integrate server-side and client-side code without the context switching of changing frameworks or languages.
 
@@ -125,14 +133,11 @@ So, overall, I'm not totally convinced. But I'd love to hear what you think.
 
 # *I gotta say, shane, we like the project and we like YOU. But what now?*
 
-Well, this is for you. You're welcome to clone the repo if it's of any value.
+The project is not being indexed, so it won't interfere with your SEO. But, I understand that this project belongs to you, and these are your assets, so let me know once you've taken a look at it and are ready for me to pull it down. But in the meantime, if this seems to be of any value, you're welcome to clone a copy of the repo for yourselves.
 
-The project is not being indexed, so it won't interfere with your SEO. But, I understand that this project belongs to you, and these are your assets, so let me know once you've taken a look at it and are ready for me to pull it down.
-
-In the meantime, you're welcome to take a look at [my portfolio](https://shanewalders.ca/) to see some actual WordPress projects I've developed with PHP/Laravel.
+You're also welcome to take a look at [my portfolio](https://shanewalders.ca/) to see some actual WordPress projects I've developed with PHP/Laravel.
 
 So, with that all said, if you find my work compelling (and you have room for another developer) I would love to have a conversation and see if we can make something work.
-
 
 ### 
 
