@@ -119,8 +119,7 @@ This component creates a vertical slider, with reel animations. Each slide conta
 
 <div class="component-spacing relative overflow-hidden">
 	<div
-		class="cursor-none relative bg-no-repeat bg-center bg-cover transition-all duration-300 flex flex-col 1400:flex-row justify-end max-1400:pb-10"
-		style="background-image: url('{slides[currentSlideIndex].background}');"
+		class="cursor-none relative bg-no-repeat bg-center bg-cover flex flex-col 1400:flex-row justify-end max-1400:pb-10"
 		on:mouseenter={handleMouseEnter}
 		on:mouseleave={handleMouseLeave}
 		on:mousedown={onDragStart}
@@ -131,6 +130,15 @@ This component creates a vertical slider, with reel animations. Each slide conta
 		on:touchend={onDragEnd}
 		role="presentation"
 	>
+
+	{#each slides as _, index}
+	<div
+		class="absolute top-0 left-0 w-full h-full bg-no-repeat bg-center bg-cover transition-all duration-300  {index === currentSlideIndex ? 'opacity-100' : 'opacity-0'}" 
+		style="background-image: url('{slides[index].background}');"
+		>
+	</div>
+	{/each}
+
 		<!-- Header -->
 		<div
 			class=" relative flex max-1400:flex-col max-1400:items-center 1400:min-w-[710px] 1400:w-[47%] 1400:h-[800px]"
