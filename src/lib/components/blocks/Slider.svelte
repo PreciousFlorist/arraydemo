@@ -1,3 +1,9 @@
+<!-- 
+Slider.svelte
+
+This component creates a vertical slider, with reel animations. Each slide contains a gradient image, icon, and line of text.
+-->
+
 <script>
 	/*------------------------------
     # Imports
@@ -16,10 +22,9 @@
 	let length = slides.length;
 	let currentSlideIndex = 0; // This index is used to set the background gradient, starting with the first slide on pageload
 
-	/*------------------------------
-    # Utility Functions
-    ------------------------------*/
-
+	/*------------------------------------------------------------
+	# Utility Functions
+	------------------------------------------------------------*/
 	// Preload Images
 	onMount(() => {
 		// Extract URLs for preloading
@@ -28,8 +33,12 @@
 		preloadImages(backgroundUrls);
 	});
 
-	// Rotate wheel
+	/*------------------------------
+    # Slide transitions
+    ------------------------------*/
+	// Rotation degree for the slide reel animation
 	let rotation = -13;
+	// Rotates the slide reel based on slide direction
 	function rotateWheel(direction) {
 		if (direction === 'next') {
 			rotation += 25.721;
@@ -38,6 +47,7 @@
 		}
 	}
 
+	// Navigates to the next or previous slide
 	function goToSlide(direction) {
 		let newIndex = direction === 'next' ? currentSlideIndex + 1 : currentSlideIndex - 1;
 		if (newIndex >= length) newIndex = 0;
@@ -46,14 +56,17 @@
 		updateSlideIndex(newIndex);
 	}
 
-	// Update function to change the slide index
+	// Updates current slide
 	function updateSlideIndex(newIndex) {
 		if (newIndex >= 0 && newIndex < slides.length) {
 			currentSlideIndex = newIndex;
 		}
 	}
 
-	// Mouse event handlers for custom cursor behavior.
+	/*------------------------------
+	# Custom cursor
+	------------------------------*/
+	// Toggles custom cursor visibility and text
 	function handleMouseEnter() {
 		cursorStore.toggle(true);
 		cursorStore.updateText(slider.cursorText); // Set cursor text value
@@ -64,33 +77,36 @@
 		cursorStore.updateText(''); // Unset cursor text value
 	}
 
-	// Exempt elements from custom cursor
+	// Cursor visibility controls for hoverable elements
 	function showDefaultCursor() {
 		cursorStore.toggle(false);
 	}
-
 	function showCustomCursor() {
 		cursorStore.toggle(true);
 	}
 
+	/*------------------------------
+	# Slider touch responses
+	------------------------------*/
 	// Monitor drag activity & response
 	let startY,
 		isDragging = false;
 	let dragDirection;
 
+	// Store drag coordiantes
 	function onDragStart(event) {
 		startY = event.pageY || (event.touches ? event.touches[0].pageY : 0);
 		isDragging = true;
 		dragDirection = null; // Reset direction on new drag
 	}
 
+	// Determine dragging direction
 	function onDragMove(event) {
 		if (!isDragging) return;
 
 		const currentY = event.pageY || (event.touches ? event.touches[0].pageY : 0);
 		const diffY = currentY - startY;
 
-		// Determine drag direction but do not trigger slide yet
 		if (diffY > 0) {
 			dragDirection = 'down';
 		} else if (diffY < 0) {
@@ -98,6 +114,7 @@
 		}
 	}
 
+	// Toggle slide on drag end
 	function onDragEnd() {
 		if (dragDirection === 'down') {
 			goToSlide('next');
@@ -187,7 +204,7 @@
 
 			<!-- Header Content -->
 			<div
-				class="flex flex-col justify-center absolute z-30 px-6 lg:px-9 sm:gap-9 w-full 1400:w-fit 1100:px-20 h-full  bottom-0 1400:py-16 1400:justify-between max-sm:pb-10 1400:gap-2.5"
+				class="flex flex-col justify-center absolute z-30 px-6 lg:px-9 sm:gap-9 w-full 1400:w-fit 1100:px-20 h-full bottom-0 1400:py-16 1400:justify-between max-sm:pb-10 1400:gap-2.5"
 			>
 				<!-- Subheader -->
 				{#if slider.subhead}
@@ -266,6 +283,7 @@
 							></div>
 						{/each}
 					</div>
+
 					<!-- Total number of slides -->
 					<p class="text-white font-semibold whitespace-nowrap">/ 0{length}</p>
 
