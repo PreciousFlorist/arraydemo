@@ -76,9 +76,18 @@ This component includes a contact form that overlays the entire screen.
 	}`}
 	style="background-image: url('{currentBackgroundImage}')"
 >
+	{#each slides as _, index}
+		<div
+			class="absolute z-40 top-0 left-0 w-full h-full bg-no-repeat bg-center bg-cover transition-all duration-300 {currentSlideIndex ===
+			index
+				? 'opacity-100'
+				: 'opacity-0'}"
+			style="background-image: url('{currentBackgroundImage}');"
+		></div>
+	{/each}
 	<!-- Conditional rendering based on slide data -->
 	{#if isValidArray(slides) && slides.length > 0 && currentSlideIndex < slides.length}
-		<div class="w-full h-[calc(100%-77px)]">
+		<div class="w-full h-[calc(100%-77px)] relative z-50">
 			<div class="p-6 sm:p-12 950:px-20 950:py-16 xl:px-200px xl:py-100px">
 				<!-- Slide Progress Indicator and Content -->
 				<div
