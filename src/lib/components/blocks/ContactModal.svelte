@@ -12,7 +12,6 @@ This component includes a contact form that overlays the entire screen.
 	------------------------------*/
 	import { writable } from 'svelte/store';
 	import { isValidArray } from '$lib/utils/validation';
-	import { gsap } from 'gsap';
 	import Button from '$lib/components/assets/Button.svelte';
 	import { isOverlayOpen, toggleContactModal } from '$lib/utils/contactForm.js';
 
@@ -53,10 +52,6 @@ This component includes a contact form that overlays the entire screen.
 	// Submission
 	function handleSubmit() {
 		toggleContactModal();
-		gsap.delayedCall(0.3, () => {
-			currentSlideIndex = 0;
-			currentBackgroundImage = slides[currentSlideIndex]?.backgroundImage || '';
-		});
 	}
 
 	// Reset form position on close
@@ -66,10 +61,10 @@ This component includes a contact form that overlays the entire screen.
 	}
 
 	$: if ($isOverlayOpen === false) {
-		resetSlideIndex(); // Reset when the modal is closed
+		setTimeout(() => {
+			resetSlideIndex();
+		}, 400);
 	}
-
-
 </script>
 
 <!-- Contact Form Modal -->
@@ -111,7 +106,7 @@ This component includes a contact form that overlays the entire screen.
 					>
 						<p class="relative top-1px">Close</p>
 
-						<img src="/images/assets/contact-modal/close.svg" alt="Close modal" loading="lazy" />
+						<img src="/images/assets/contact-modal/close.svg" alt="Close modal" />
 					</button>
 				</div>
 
@@ -121,7 +116,7 @@ This component includes a contact form that overlays the entire screen.
 						class="xl:basis-340px 900:min-w-320px xl:min-w-[290px] 1400:min-w-[350px] flex flex-col gap-3 1400:gap-5"
 					>
 						<p class="text-5xl xl:text-4xl 1400:text-5xl text-white font-serif mb-2.5">
-							{slides[currentSlideIndex].title}
+							{@html slides[currentSlideIndex].title}
 						</p>
 						<p class="text-2xl text-white font-sans font-extralight font-ballance">
 							{slides[currentSlideIndex].description}
@@ -184,7 +179,7 @@ This component includes a contact form that overlays the entire screen.
 														: 'after:border-transparent'
 												}`}
 											>
-												<img src={cell.image} alt={cell.alt} class="brightness-0 invert mx-auto" loading="lazy"/>
+												<img src={cell.image} alt={cell.alt} class="brightness-0 invert mx-auto" />
 												<p
 													class="font-sans tracking-1px font-semibold text-white mt-22px mx-auto text-center max-w-[180px]"
 												>
