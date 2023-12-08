@@ -1,0 +1,3 @@
+.component-spacing {
+	@apply 800:pl-14 1100:pl-20;
+}

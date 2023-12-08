@@ -1,10 +1,8 @@
 @import './styles/resets/fonts.css';
+@import './styles/resets/spacing.css';
 @import './styles/resets/transitions.css';
 @import './styles/backgrounds/background.css';
 
-.component-spacing {
-	@apply 800:pl-14 1100:pl-20;
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
