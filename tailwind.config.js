@@ -16,7 +16,7 @@ module.exports = {
 				egyptianblue: '#2c3a9f',
 				sandybrown: '#f59e50',
 				jet: '#333333',
-				arraygray: '#777777',
+				arraygray: '#707070',
 				lightbox: '#1E1E1E'
 			},
 			backgroundImage: {

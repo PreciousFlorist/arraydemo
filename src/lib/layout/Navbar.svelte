@@ -33,8 +33,8 @@ The website's header, featuring logo, navigation links, social media links, and 
 >
 	<!-- Logo -->
 	<div class="relative z-30 flex">
-		<img src="/images/logos/array-wordmark-logo.svg" alt="Array Logo" class="h-11" />
-		<img src="/images/logos/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11" />
+		<img src="/images/logos/array-wordmark-logo.svg" alt="Array Logo" class="h-11"/>
+		<img src="/images/logos/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11"/>
 	</div>
 
 	<!-- Main Navigation -->

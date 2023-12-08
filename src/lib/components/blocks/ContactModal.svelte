@@ -111,7 +111,7 @@ This component includes a contact form that overlays the entire screen.
 					>
 						<p class="relative top-1px">Close</p>
 
-						<img src="/images/assets/contact-modal/close.svg" alt="Close modal" />
+						<img src="/images/assets/contact-modal/close.svg" alt="Close modal" loading="lazy" />
 					</button>
 				</div>
 
@@ -184,7 +184,7 @@ This component includes a contact form that overlays the entire screen.
 														: 'after:border-transparent'
 												}`}
 											>
-												<img src={cell.image} alt={cell.alt} class="brightness-0 invert mx-auto" />
+												<img src={cell.image} alt={cell.alt} class="brightness-0 invert mx-auto" loading="lazy"/>
 												<p
 													class="font-sans tracking-1px font-semibold text-white mt-22px mx-auto text-center max-w-[180px]"
 												>

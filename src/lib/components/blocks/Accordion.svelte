@@ -164,6 +164,7 @@ This component implements an accordion with an embedded carousel and custom curs
 																	class="max-xl:absolute w-full h-full object-cover object-center pointer-events-none"
 																	src={project.imageSrc}
 																	alt={project.imageAlt}
+																	loading="lazy"
 																/>
 															{:else if project.videoSrc}
 																<video

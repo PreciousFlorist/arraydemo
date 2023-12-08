@@ -67,10 +67,17 @@ This component creates a responsive header for mobile devices, features navigati
 	<!-- Logo -->
 	<div class="relative z-30 flex">
 		<img src="/images/logos/array-wordmark-logo.svg" alt="Array Logo" class="h-11" />
-		<img src="/images/logos/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11" />
+		<img
+			src="/images/logos/array-icon-logo.svg"
+			alt="Array Logo"
+			class="h-11 -ml-11"
+			loading="lazy"
+		/>
 	</div>
 	<!-- Hamburger -->
 	<button
+		id="hamburgerMenu"
+		title="Hamburger Menu"
 		class="absolute z-30 right-0 p-15px h-full w-16 border-l border-silver bg-whitesmoke flex justify-center items-center"
 		on:click={toggleMenu}
 	>
@@ -138,7 +145,12 @@ This component creates a responsive header for mobile devices, features navigati
 				placeholder="Search our site"
 			/>
 			<div class="w-16 flex justify-center items-center">
-				<img src="/images/navigation/icons/search-icon.svg" alt="Search" class="cursor-pointer" />
+				<img
+					src="/images/navigation/icons/search-icon.svg"
+					alt="Search"
+					class="cursor-pointer"
+					loading="lazy"
+				/>
 			</div>
 		</div>
 		<!-- Call to Action -->

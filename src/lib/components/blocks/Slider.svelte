@@ -191,6 +191,7 @@ This component creates a vertical slider, with reel animations. Each slide conta
 					class="relative -top-2.5 rotate-90 mx-auto max-lg:w-[60px]"
 					src="/images/assets/slider/pointer.svg"
 					alt="Pointer"
+					loading="lazy"
 				/>
 			</div>
 
@@ -248,6 +249,7 @@ This component creates a vertical slider, with reel animations. Each slide conta
 										class={`max-500:hidden w-[75px] ${index === 0 ? 'fade-in-left' : ''}`}
 										src={slide.iconURL}
 										alt={slide.iconAlt}
+										loading="lazy"
 									/>
 								{/if}
 								<!-- Slide copy -->
@@ -299,7 +301,7 @@ This component creates a vertical slider, with reel animations. Each slide conta
 							on:mouseenter={showDefaultCursor}
 							on:mouseleave={showCustomCursor}
 						>
-							<img src="/images/assets/slider/navigation.svg" alt="Previous" />
+							<img src="/images/assets/slider/navigation.svg" alt="Previous" loading="lazy"/>
 						</button>
 						<!-- Next -->
 						<button
@@ -308,7 +310,7 @@ This component creates a vertical slider, with reel animations. Each slide conta
 							on:mouseenter={showDefaultCursor}
 							on:mouseleave={showCustomCursor}
 						>
-							<img class="rotate-180" src="/images/assets/slider/navigation.svg" alt="Next" />
+							<img class="rotate-180" src="/images/assets/slider/navigation.svg" alt="Next" loading="lazy"/>
 						</button>
 					</div>
 				</div>

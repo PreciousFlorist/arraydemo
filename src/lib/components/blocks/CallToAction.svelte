@@ -102,10 +102,15 @@ This CTA component includes:
 			class="absolute z-10 flex items-center justify-center 1400:right-[15%] 1400:-bottom-[9%] 1400:scale-90 lg:right-[12%] lg:-bottom-[11%] lg:scale-[.8] 500:right-[3%] -bottom-[16%] scale-[.6] right-[1%]"
 		>
 			<div class="relative">
-				<img bind:this={starElement} alt="Meet Array" src="/images/components/cta/star-text.svg" />
+				<img
+					bind:this={starElement}
+					alt="Meet Array"
+					src="/images/components/cta/star-text.svg"
+					loading="lazy"
+				/>
 			</div>
 			<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-				<img alt="White array logo" src="/images/components/cta/star.svg" />
+				<img alt="White array logo" src="/images/components/cta/star.svg" loading="lazy" />
 			</div>
 		</div>
 	</div>
@@ -121,11 +126,13 @@ This CTA component includes:
 						class="absolute z-10 top-0 left-0 w-full h-full object-cover"
 						src={photo.imageURL}
 						alt={photo.imageAlt}
+						loading="lazy"
 					/>
 					<img
 						class="opacity-90 z-20 w-6 absolute top-3 right-3"
 						src="/images/components/cta/picture-in-picture.svg"
 						alt="Open in new tab"
+						loading="lazy"
 					/>
 				</li>
 			{/each}
