@@ -8,8 +8,9 @@ This component includes the page tile and a video modal that overlays the entire
 	/*------------------------------
     # Imports
     ------------------------------*/
-	import { cursorStore } from '$lib/stores/cursorStore';
 	import { writable } from 'svelte/store';
+	import { cursorStore } from '$lib/stores/cursorStore';
+	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
 	# Fetch Props
@@ -47,7 +48,8 @@ This component includes the page tile and a video modal that overlays the entire
 <div class="component-spacing pt-16 950:pt-20 flex flex-col overflow-hidden">
 	{#if hero.header}
 		<h1
-			class="font-serif text-onyx text-3xl leading-snug lg:text-[34px] xl:text-[38px] mx-6 lg:mx-9 1100:mx-20 py-10 lg:py-20 800:max-w-[65vw] xl:max-w-[800px]"
+			use:fade
+			class="fade-in-right font-serif text-onyx text-3xl leading-snug lg:text-[34px] xl:text-[38px] mx-6 lg:mx-9 1100:mx-20 py-10 lg:py-20 800:max-w-[65vw] xl:max-w-[800px]"
 		>
 			{hero.header}
 		</h1>

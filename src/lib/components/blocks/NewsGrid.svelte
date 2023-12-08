@@ -10,6 +10,7 @@ This component displays a grid of news items, with a header, button, and backgro
 	------------------------------*/
 	import { isValidArray, isValidObject } from '$lib/utils/validation';
 	import Button from '$lib/components/assets/Button.svelte';
+	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
 	# Fetch and Destructure Props
@@ -17,6 +18,7 @@ This component displays a grid of news items, with a header, button, and backgro
 	export let news;
 	let cta = news.cta || {};
 	let cards = news.cards || [];
+
 </script>
 
 <div class="component-spacing py-20">
@@ -26,7 +28,9 @@ This component displays a grid of news items, with a header, button, and backgro
 	>
 		<!-- Header -->
 		{#if news.header}
-			<p class="text-onyx font-serif text-3xl 580:text-4xl xl:text-5xl">{news.header}</p>
+			<p use:fade class="fade-in-up text-onyx font-serif text-3xl 580:text-4xl xl:text-5xl">
+				{news.header}
+			</p>
 		{/if}
 		<!-- CTA -->
 		{#if isValidObject(cta) && cta.buttonText && cta.buttonURL}
@@ -39,7 +43,8 @@ This component displays a grid of news items, with a header, button, and backgro
 			<!-- Individual Card -->
 			{#each cards as card, index}
 				<li
-					class={`group w-2/3 580:w-5/12 xl:w-1/4 flex flex-col justify-between px-6 py-9 min-h-[350px] min-w-[280px] max-h-[400px] aspect-square relative cursor-pointer border-b border-r border-silver after:transition-all after:duration-300 after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-white hover:after:opacity-0 news-bg-${
+					use:fade={{ delay: index * 100 }}
+					class={`fade-in-down  group w-2/3 580:w-5/12 xl:w-1/4 flex flex-col justify-between px-6 py-9 min-h-[350px] min-w-[280px] max-h-[400px] aspect-square relative cursor-pointer border-b border-r border-silver after:transition-all after:duration-300 after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-white hover:after:opacity-0 news-bg-${
 						index + 1
 					}`}
 				>

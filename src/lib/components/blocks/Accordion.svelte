@@ -15,6 +15,7 @@ This component implements an accordion with an embedded carousel and custom curs
 	import '@splidejs/svelte-splide/css/core';
 	import Link from '$lib/components/assets/Link.svelte';
 	import { cursorStore } from '$lib/stores/cursorStore';
+	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
 	# Fetch and Destructure Props
@@ -44,13 +45,16 @@ This component implements an accordion with an embedded carousel and custom curs
 	}
 </script>
 
-<div class="component-spacing py-20">
+<div class="component-spacing py-20 overflow-hidden">
 	<!-- Accordion title -->
-	<p class="uppercase font-sans font-semibold text-onyx tracking-1px pb-5 px-6 lg:px-9 1100:px-20">
+	<p
+		use:fade
+		class="fade-in-right uppercase font-sans font-semibold text-onyx tracking-1px pb-5 px-6 lg:px-9 1100:px-20"
+	>
 		{accordion.title}
 	</p>
 	{#if isValidArray(panels)}
-		<div class="border-t border-silver">
+		<div class=" border-t border-silver">
 			<!-- Individual Accordion Panel -->
 			{#each panels as panel, index}
 				<div class="border-b border-silver">
@@ -61,12 +65,12 @@ This component implements an accordion with an embedded carousel and custom curs
 						}`}
 						on:click={() => toggleAccordion(index)}
 					>
-						<div class="flex items-center lg:gap-7">
+						<div use:fade class="fade-in-right flex items-center lg:gap-7">
 							<p class="hidden lg:block text-arraygray font-sans font-semibold">
 								{'0' + (index + 1)}
 							</p>
 							<p
-								class={`font-serif transition-all duration-300 ${
+								class={` font-serif transition-all duration-300 ${
 									openAccordionIndex === index
 										? ' text-onyx text-2xl md:text-3xl lg:text-4xl'
 										: 'text-arraygray  text-xl md:text-2xl lg:text-3xl'
@@ -81,7 +85,8 @@ This component implements an accordion with an embedded carousel and custom curs
 
 					<!-- Accordion Panel Content -->
 					<div
-						class={`overflow-hidden flex flex-col lg:flex-row bg-whitesmoke transition-all duration-300 ${
+						use:fade
+						class={`fade-in-up overflow-hidden flex flex-col lg:flex-row bg-whitesmoke transition-all duration-300 ${
 							openAccordionIndex === index ? 'max-h-[1000px] lg:h-[600px]' : 'max-h-0 lg:h-0'
 						}`}
 					>
@@ -89,7 +94,12 @@ This component implements an accordion with an embedded carousel and custom curs
 						<div
 							class="lg:w-[45%] h-full p-6 pb-8 lg:p-12 1100:pl-20 border-t border-r border-silver flex flex-col gap-7 justify-between"
 						>
-							<p class="font-sans text-arraygray leading-normal font-light text-2xl">{panel.body}</p>
+							<p
+								use:fade
+								class="fade-in-up font-sans text-arraygray leading-normal font-light text-2xl"
+							>
+								{panel.body}
+							</p>
 
 							<div class="hidden lg:block">
 								<Link url={panel.buttonURL} text={panel.buttonText} color="blue" />
@@ -102,7 +112,7 @@ This component implements an accordion with an embedded carousel and custom curs
 
 						<!-- Carousel -->
 						<div
-							class="cursor-none group flex lg:w-[55%] 1200:w-[65%] h-[600px] lg:border-t border-silver"
+							class=" cursor-none group flex lg:w-[55%] 1200:w-[65%] h-[600px] lg:border-t border-silver overflow-hidden"
 							on:mouseenter={handleMouseEnter}
 							on:mouseleave={handleMouseLeave}
 							role="presentation"
@@ -112,7 +122,10 @@ This component implements an accordion with an embedded carousel and custom curs
 									options={{ type: 'loop', width: '100%', height: '100%', gap: 0 }}
 									hasTrack={false}
 								>
-									<div class="relative h-full w-full">
+									<div
+										use:fade={{index, delay: 0, onlyFirst: true}}
+										class="{index === 0 ? 'fade-in-left' : ''} relative h-full w-full"
+									>
 										<SplideTrack>
 											{#each panel.caseStudy as project, i}
 												<SplideSlide>

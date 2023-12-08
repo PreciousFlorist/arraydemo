@@ -17,6 +17,7 @@ This CTA component includes:
 	import { gsap } from 'gsap';
 	import Button from '$lib/components/assets/Button.svelte';
 	import { isValidArray, isValidObject } from '$lib/utils/validation';
+	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
 	# Fetch and Destructure Props
@@ -106,7 +107,7 @@ This CTA component includes:
 	
 	<!-- Instagram Image Grid -->
 	{#if isValidArray(photos)}
-		<ul class="flex overflow-scroll">
+		<ul use:fade class="fade-in-down flex overflow-scroll">
 			{#each photos as _, index}
 				<li
 					class={`w-2/3 580:w-5/12 xl:w-1/4 flex flex-col justify-between px-6 py-9 min-h-[350px] min-w-[280px] max-h-[400px] aspect-square relative cursor-pointer cta-bg-${

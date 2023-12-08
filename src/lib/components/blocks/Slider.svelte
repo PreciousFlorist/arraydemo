@@ -13,6 +13,7 @@ This component creates a vertical slider, with reel animations. Each slide conta
 	import { isValidArray } from '$lib/utils/validation';
 	import { preloadImages } from '$lib/utils/preloadImages';
 	import Link from '$lib/components/assets/Link.svelte';
+	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
 	# Fetch Props and Destructure Props
@@ -215,7 +216,8 @@ This component creates a vertical slider, with reel animations. Each slide conta
 				<!-- Title -->
 				{#if slider.title}
 					<p
-						class="relative z-10 w-fit capitalize font-serif tracking-1px text-white text-4xl leading-[45px] lg:text-5xl lg:leading-[55px]"
+						use:fade
+						class="fade-in-up relative z-10 w-fit capitalize font-serif tracking-1px text-white text-4xl leading-[45px] lg:text-5xl lg:leading-[55px]"
 					>
 						{@html slider.title}
 					</p>
@@ -242,7 +244,7 @@ This component creates a vertical slider, with reel animations. Each slide conta
 				>
 					<!-- Slide Loop -->
 					{#each slides as slide, index}
-						<div class={`flex max-1400:absolute bottom-[105px] 580:bottom-[138px]  `}>
+						<div class={`flex max-1400:absolute bottom-[105px] 580:bottom-[138px] 1400:mr-auto`}>
 							<div
 								class={`px-6 lg:px-9 1100:px-20 1400:p-0 select-none max-w-[633px] lg:max-w-[800px] 1400:max-w-[70%] 1400:basis-[700px] flex justify-center items-center gap-8 ${
 									index === currentSlideIndex ? 'opacity-100' : 'opacity-0 absolute'
@@ -250,11 +252,21 @@ This component creates a vertical slider, with reel animations. Each slide conta
 							>
 								<!-- Icon -->
 								{#if slide.iconURL && slide.iconAlt}
-									<img class="max-500:hidden w-[75px]" src={slide.iconURL} alt={slide.iconAlt} />
+									<img
+										use:fade={{ index, delay: 0, onlyFirst: true }}
+										class={`max-500:hidden w-[75px] ${index === 0 ? 'fade-in-left' : ''}`}
+										src={slide.iconURL}
+										alt={slide.iconAlt}
+									/>
 								{/if}
 								<!-- Slide copy -->
 								{#if slide.body}
-									<p class="text-white tracking-1px text-2xl leading-9">
+									<p
+										use:fade={{ index, delay: 100, onlyFirst: true }}
+										class={` text-white tracking-1px text-2xl leading-9 ${
+											index === 0 ? 'fade-in-left' : ''
+										}`}
+									>
 										{slide.body}
 									</p>
 								{/if}
