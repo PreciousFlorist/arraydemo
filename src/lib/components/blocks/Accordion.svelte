@@ -8,10 +8,8 @@ This component implements an accordion with an embedded carousel and custom curs
 	/*------------------------------
 	# Imports
 	------------------------------*/
-	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import { isValidArray } from '$lib/utils/validation';
-	import { preloadImages } from '$lib/utils/preloadImages';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css/core';
 	import Link from '$lib/components/assets/Link.svelte';
@@ -44,22 +42,6 @@ This component implements an accordion with an embedded carousel and custom curs
 		cursorStore.toggle(false);
 		cursorStore.updateText(''); // Unset cursor text value
 	}
-
-	/*------------------------------
-    # Lifecycle Hooks
-    ------------------------------*/
-	// Preload Images
-	onMount(() => {
-		// Extract image URLs for preloading
-		let imageUrls = panels.flatMap(
-			(panel) =>
-				panel.caseStudy
-					?.filter((study) => study.imageSrc !== undefined)
-					.map((study) => study.imageSrc) || []
-		);
-		// Process files
-		preloadImages(imageUrls);
-	});
 </script>
 
 <div class="component-spacing py-20 overflow-hidden">

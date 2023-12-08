@@ -8,15 +8,13 @@ This component creates a vertical slider, with reel animations. Each slide conta
 	/*------------------------------
     # Imports
     ------------------------------*/
-	import { onMount } from 'svelte';
 	import { cursorStore } from '$lib/stores/cursorStore';
 	import { isValidArray } from '$lib/utils/validation';
-	import { preloadImages } from '$lib/utils/preloadImages';
 	import Link from '$lib/components/assets/Link.svelte';
 	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
-	# Fetch Props and Destructure Props
+	# Fetch and Destructure Props
 	------------------------------*/
 	export let slider;
 	let slides = slider.slides || [];
@@ -26,13 +24,6 @@ This component creates a vertical slider, with reel animations. Each slide conta
 	/*------------------------------------------------------------
 	# Utility Functions
 	------------------------------------------------------------*/
-	// Preload Images
-	onMount(() => {
-		// Extract URLs for preloading
-		let backgroundUrls = slides.map((slide) => slide.background);
-		// Process files
-		preloadImages(backgroundUrls);
-	});
 
 	/*------------------------------
     # Slide transitions
@@ -130,7 +121,6 @@ This component creates a vertical slider, with reel animations. Each slide conta
 	<div
 		class="cursor-none relative bg-no-repeat bg-center bg-cover transition-all duration-300 flex flex-col 1400:flex-row justify-end max-1400:pb-10"
 		style="background-image: url('{slides[currentSlideIndex].background}');"
-
 		on:mouseenter={handleMouseEnter}
 		on:mouseleave={handleMouseLeave}
 		on:mousedown={onDragStart}

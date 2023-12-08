@@ -16,7 +16,6 @@ This CTA component includes:
 	import { gsap } from 'gsap';
 	import Button from '$lib/components/assets/Button.svelte';
 	import { isValidArray, isValidObject } from '$lib/utils/validation';
-	import { preloadImages } from '$lib/utils/preloadImages';
 	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
@@ -37,12 +36,6 @@ This CTA component includes:
     # Lifecycle Hooks
     ------------------------------*/
 	onMount(() => {
-		// Prelaod images
-		let images = photos.map((photo) => photo.imageURL);
-		preloadImages(images);
-		let backgrounds = [background.primary, background.secondary];
-		preloadImages(backgrounds);
-
 		// Calculate the total width of the scrollable content
 		const textWidth = scrollContainer.querySelector('p').offsetWidth;
 		const totalWidth = textWidth * scrollContainer.children.length;

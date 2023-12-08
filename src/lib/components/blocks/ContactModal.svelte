@@ -10,13 +10,9 @@ This component includes a contact form that overlays the entire screen.
 	/*------------------------------
 	# Imports
 	------------------------------*/
-	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { isValidArray } from '$lib/utils/validation';
-	import { preloadImages } from '$lib/utils/preloadImages';
-
 	import { gsap } from 'gsap';
-
 	import Button from '$lib/components/assets/Button.svelte';
 	import { isOverlayOpen, toggleContactModal } from '$lib/utils/contactForm.js';
 
@@ -73,13 +69,7 @@ This component includes a contact form that overlays the entire screen.
 		resetSlideIndex(); // Reset when the modal is closed
 	}
 
-	// Preload background images
-	onMount(() => {
-		// Extract URLs for preloading
-		let images = slides.map((slide) => slide.backgroundImage);
-		// Process files
-		preloadImages(images);
-	});
+
 </script>
 
 <!-- Contact Form Modal -->

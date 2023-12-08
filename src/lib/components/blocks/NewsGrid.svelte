@@ -8,10 +8,8 @@ This component displays a grid of news items, with a header, button, and backgro
 	/*------------------------------
 	# Imports
 	------------------------------*/
-	import { onMount } from 'svelte';
 	import { isValidArray, isValidObject } from '$lib/utils/validation';
 	import Button from '$lib/components/assets/Button.svelte';
-	import { preloadImages } from '$lib/utils/preloadImages';
 	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
@@ -20,17 +18,6 @@ This component displays a grid of news items, with a header, button, and backgro
 	export let news;
 	let cta = news.cta || {};
 	let cards = news.cards || [];
-
-	/*------------------------------
-	# Utility Functions
-	------------------------------*/
-	// Preload Images
-	onMount(() => {
-		// Extract URLs for preloading
-		let images = cards.map((card) => card.background);
-		// Process files
-		preloadImages(images);
-	});
 </script>
 
 <div class="component-spacing py-20">
