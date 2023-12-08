@@ -103,7 +103,7 @@ This component includes the page tile and a video modal that overlays the entire
 	<div
 		class={`
         fixed top-0 left-0 w-full h-full flex items-center justify-center transition-all duration-300
-        after:bg-lightbox after:opacity-90 after:absolute after:top-0 after:left-0 after:w-full after:h-full z-40
+        after:bg-lightbox after:opacity-90 after:absolute after:top-0 after:left-0 after:w-full after:h-full z-[100]
         ${$isLightboxOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
     `}
 		role="presentation"
