@@ -19,7 +19,7 @@ This project is a Valentine's Day card - a little love letter to Array.
 
 I'm a big fan of your work (read above), and I've taken on this project over the past week with the intention of showing you my development process.
 
-My hope is that this project will help demonstrate the approach I take when solving problems, where along the process I notice things are wrong and how I fix them.
+My hope is that this project will help demonstrate the approach I take when solving problems, where along the process I notice things are wrong and how I fix them. Though, please note that all of this was just done in the last week - and that I still consider this to be a work in progress.
 
 
 ![I choo-choo-choose you!](https://media1.tenor.com/m/YNBKbwhjfNcAAAAd/the-simpsons-ralph-wiggum.gif)
