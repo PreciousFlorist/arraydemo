@@ -133,7 +133,9 @@ So, overall, I'm not totally convinced. But I'd love to hear what you think.
 
 # *I gotta say, shane, we like the project and we like YOU. But what now?*
 
-The project is not being indexed, so it won't interfere with your SEO. But, I understand that this project belongs to you, and these are your assets, so let me know once you've taken a look at it and are ready for me to pull it down. But in the meantime, if this seems to be of any value, you're welcome to clone a copy of the repo for yourselves.
+The project is not being indexed, so it won't interfere with your SEO. But, I understand that these are your assets, so I'd like to be clear in saying that this project belongs to you.
+
+Let me know once you've taken a look at it and are ready for me to pull it down. But in the meantime, if this seems to be of any value, you're welcome to clone a copy of the repo for yourselves.
 
 You're also welcome to take a look at [my portfolio](https://shanewalders.ca/) to see some actual WordPress projects I've developed with PHP/Laravel.
 
