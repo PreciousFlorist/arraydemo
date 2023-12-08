@@ -1,14 +1,29 @@
 {
-    "title": "We're Glad You Found Us!",
-    "button": {
-      "title": "How can we help you today?",
-      "url": "#contact-us"
-    },
-    "instagramImages": [
-      "cta-bg-1",
-      "cta-bg-2",
-      "cta-bg-3",
-      "cta-bg-4"
-    ]
-  }
-  
+	"title": "We're Glad You Found Us!",
+	"button": {
+		"title": "How can we help you today?",
+		"url": "#contact-us"
+	},
+	"backgroundImages": {
+		"primary": "/images/components/cta/background-gradient.webp",
+		"secondary": "/images/components/cta/pinstripe.svg"
+	},
+	"instagramImages": [
+		{
+			"imageURL": "/images/components/cta/app.webp",
+			"imageAlt": "Gen-Find web app"
+		},
+		{
+			"imageURL": "/images/components/cta/business-card.webp",
+			"imageAlt": "Om Boys business card"
+		},
+		{
+			"imageURL": "/images/components/cta/hiring.webp",
+			"imageAlt": "We're hiring!"
+		},
+		{
+			"imageURL": "/images/components/cta/portfolio.webp",
+			"imageAlt": "Print portfolio package"
+		}
+	]
+}

@@ -1,7 +1,6 @@
 @import './styles/resets/fonts.css';
 @import './styles/resets/spacing.css';
 @import './styles/resets/transitions.css';
-@import './styles/backgrounds/background.css';
 
 @tailwind base;
 @tailwind components;

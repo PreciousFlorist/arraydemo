@@ -129,7 +129,8 @@ This component creates a vertical slider, with reel animations. Each slide conta
 <div class="component-spacing relative overflow-hidden">
 	<div
 		class="cursor-none relative bg-no-repeat bg-center bg-cover transition-all duration-300 flex flex-col 1400:flex-row justify-end max-1400:pb-10"
-		style={`background-image: url('${slides[currentSlideIndex].background}')`}
+		style="background-image: url('{slides[currentSlideIndex].background}');"
+
 		on:mouseenter={handleMouseEnter}
 		on:mouseleave={handleMouseLeave}
 		on:mousedown={onDragStart}

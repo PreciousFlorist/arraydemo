@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="16" viewBox="0 0 13 16">
-    <g id="Repeat_Grid_1" data-name="Repeat Grid 1">
-        <g transform="translate(-202 -490)">
-            <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,13H0Z" transform="translate(215 490) rotate(90)" fill="#fff"></path>
-        </g>
-    </g>
-</svg>
+<svg height="16" viewBox="0 0 13 16" width="13" xmlns="http://www.w3.org/2000/svg"><path d="m8 0 8 13h-16z" fill="#fff" transform="matrix(0 1 -1 0 13 0)"/></svg>

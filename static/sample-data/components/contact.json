@@ -2,7 +2,7 @@
 	"form": {
 		"slides": [
 			{
-				"backgroundImage": "sidebar-contact",
+				"backgroundImage": "/images/navigation/sidebar/backgrounds/contact.webp",
 				"nav": "Contact details",
 				"title": "Let's start the conversation.",
 				"description": "We're glad you found Array and choose to get in touch. So enough about us, what about you?",
@@ -32,7 +32,7 @@
 				"buttonText": "Next"
 			},
 			{
-				"backgroundImage": "sidebar-services",
+				"backgroundImage": "/images/navigation/sidebar/backgrounds/services.webp",
 				"nav": "Services",
 				"title": "It's great to meet you!",
 				"description": "What can we do for you? Pick one - or any combination - of our awesome services below.",
@@ -78,7 +78,7 @@
 				"previousButton": true
 			},
 			{
-				"backgroundImage": "sidebar-project",
+				"backgroundImage": "/images/navigation/sidebar/backgrounds/project.webp",
 				"nav": "Project details",
 				"title": "Sounds great - tell us more!",
 				"description": "Let us know some of the finer details of your project.",
@@ -107,7 +107,7 @@
 				"previousButton": true
 			},
 			{
-				"backgroundImage": "sidebar-complete",
+				"backgroundImage": "/images/navigation/sidebar/backgrounds/complete.webp",
 				"nav": "Complete",
 				"title": "Ready to wrap up?",
 				"description": "I think we have all we need right now to get the ball rolling here. Just one more thing…",

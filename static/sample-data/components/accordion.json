@@ -18,7 +18,7 @@
 				{
 					"title": "For The Good of The Wild",
 					"bio": "Attracting tourists to the North Island with a sustainable tourism campaign.",
-					"imageSrc": "/images/components/accordion/for-the-good-of-the-wild.jpg",
+					"imageSrc": "/images/components/accordion/for-the-good-of-the-wild.webp",
 					"imageAlt": "For The Good Of The Wild project",
 					"background": "#5a7f72"
 				}
@@ -34,14 +34,14 @@
 				{
 					"title": "Vancouver Island North Tourism",
 					"bio": "Turning inspired travellers into North Island explorers.",
-					"imageSrc": "/images/components/accordion/vancouver-island-north-tourism.jpg",
+					"imageSrc": "/images/components/accordion/vancouver-island-north-tourism.webp",
 					"imageAlt": "Vancouver Island Tourism project",
 					"background": "#b5862d"
 				},
 				{
 					"title": "TactEx Industries",
 					"bio": "Launching Canadian-made diamond core drilling equipment into the mining and exploration market.",
-					"imageSrc": "/images/components/accordion/tactex-industries.jpg",
+					"imageSrc": "/images/components/accordion/tactex-industries.webp",
 					"imageAlt": "TactEx project",
 					"background": "#000000"
 				}
@@ -57,14 +57,14 @@
 				{
 					"title": "Emergency Management Cowichan",
 					"bio": "Strengthening CVRD's community capacity with emergency preparedness and planning online.",
-					"imageSrc": "/images/components/accordion/emc-cowichan.jpeg",
+					"imageSrc": "/images/components/accordion/emc-cowichan.webp",
 					"imageAlt": "EMC Project",
 					"background": "#ed7e00"
 				},
 				{
 					"title": "Shakeout BC",
 					"bio": "Empowering B.C.'s communities with earthquake preparedness and safety.",
-					"imageSrc": "/images/components/accordion/shakeout-bc.jpeg",
+					"imageSrc": "/images/components/accordion/shakeout-bc.webp",
 					"imageAlt": "Shakeout BC project",
 					"background": "#ffa01c"
 				}
@@ -80,7 +80,7 @@
 				{
 					"title": "Northfield Dental Clinic",
 					"bio": "Welcoming new patients to Nanaimo's family-first dental clinic.",
-					"imageSrc": "/images/components/accordion/northfiled-dental.jpeg",
+					"imageSrc": "/images/components/accordion/northfiled-dental.webp",
 					"imageAlt": "Northfield Dental project",
 					"background": "#000000"
 				},
@@ -102,14 +102,14 @@
 				{
 					"title": "Shift",
 					"bio": "Leading company in renewable solutions elevates their brand",
-					"imageSrc": "/images/components/accordion/shift-brochure.jpeg",
+					"imageSrc": "/images/components/accordion/shift-brochure.webp",
 					"imageAlt": "Shift project",
 					"background": "#00aeca"
 				},
 				{
 					"title": "House of Kiyo",
 					"bio": "A brand presence that exudes effortless sophistication and class.",
-					"imageSrc": "/images/components/accordion/kiyo-lobby.jpeg",
+					"imageSrc": "/images/components/accordion/kiyo-lobby.webp",
 					"imageAlt": "Kiyo salon and day spa",
 					"background": "#000000"
 				}
@@ -125,14 +125,14 @@
 				{
 					"title": "Breze Aveda Concept Salon & Day Spa",
 					"bio": "A digital makeover for a local beauty salon and spa.",
-					"imageSrc": "/images/components/accordion/breze-aveda.jpeg",
+					"imageSrc": "/images/components/accordion/breze-aveda.webp",
 					"imageAlt": "A brochure",
 					"background": "#e3dcd8"
 				},
 				{
 					"title": "Newcastle Engineering Ltd.",
 					"bio": "Creating long-term careers for future civil engineers and surveyors.",
-					"imageSrc": "/images/components/accordion/newcastle-engineering.jpeg",
+					"imageSrc": "/images/components/accordion/newcastle-engineering.webp",
 					"imageAlt": "Newcastle Engineering project",
 					"background": "#c3cc04"
 				}

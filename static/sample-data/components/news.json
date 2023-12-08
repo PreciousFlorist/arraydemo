@@ -1,26 +1,29 @@
 {
-    "header": "Industry News & Trends",
-    "cta": {
-      "buttonText": "Visit our blog",
-      "buttonURL": "#visit-our-blog"
-    },
-    "cards": [
-      {
-        "title": "That's a Wrap! Here's Our 2023 VI Economic Summit Recap.",
-        "date": "Nov 17, 2023"
-      },
-      {
-        "title": "Updated 2023: The Best Things To Do in Nanaimo This Winter",
-        "date": "Nov 9, 2029"
-      },
-      {
-        "title": "5 Must-Try Activities Around Nanaimo for the 2023 Fall Season",
-        "date": "Oct 3, 2023"
-      },
-      {
-        "title": "5 Must-Read Content Marketing Tips for Creating A Consistent Brand On Social Media",
-        "date": "Sep 28, 2023"
-      }
-    ]
-  }
-  
+	"header": "Industry News & Trends",
+	"cta": {
+		"buttonText": "Visit our blog",
+		"buttonURL": "#visit-our-blog"
+	},
+	"cards": [
+		{
+			"title": "That's a Wrap! Here's Our 2023 VI Economic Summit Recap.",
+			"date": "Nov 17, 2023",
+			"background": "/images/components/news/blue.webp"
+		},
+		{
+			"title": "Updated 2023: The Best Things To Do in Nanaimo This Winter",
+			"date": "Nov 9, 2029",
+			"background": "/images/components/news/orange.webp"
+		},
+		{
+			"title": "5 Must-Try Activities Around Nanaimo for the 2023 Fall Season",
+			"date": "Oct 3, 2023",
+			"background": "/images/components/news/purple.webp"
+		},
+		{
+			"title": "5 Must-Read Content Marketing Tips for Creating A Consistent Brand On Social Media",
+			"date": "Sep 28, 2023",
+			"background": "/images/components/news/yellow.webp"
+		}
+	]
+}

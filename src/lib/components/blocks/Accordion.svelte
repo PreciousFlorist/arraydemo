@@ -8,9 +8,10 @@ This component implements an accordion with an embedded carousel and custom curs
 	/*------------------------------
 	# Imports
 	------------------------------*/
-
+	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import { isValidArray } from '$lib/utils/validation';
+	import { preloadImages } from '$lib/utils/preloadImages';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css/core';
 	import Link from '$lib/components/assets/Link.svelte';
@@ -43,6 +44,22 @@ This component implements an accordion with an embedded carousel and custom curs
 		cursorStore.toggle(false);
 		cursorStore.updateText(''); // Unset cursor text value
 	}
+
+	/*------------------------------
+    # Lifecycle Hooks
+    ------------------------------*/
+	// Preload Images
+	onMount(() => {
+		// Extract image URLs for preloading
+		let imageUrls = panels.flatMap(
+			(panel) =>
+				panel.caseStudy
+					?.filter((study) => study.imageSrc !== undefined)
+					.map((study) => study.imageSrc) || []
+		);
+		// Process files
+		preloadImages(imageUrls);
+	});
 </script>
 
 <div class="component-spacing py-20 overflow-hidden">
@@ -66,9 +83,11 @@ This component implements an accordion with an embedded carousel and custom curs
 						on:click={() => toggleAccordion(index)}
 					>
 						<div use:fade class="fade-in-right flex items-center lg:gap-7">
+							<!-- Pannel number -->
 							<p class="hidden lg:block text-arraygray font-sans font-semibold">
 								{'0' + (index + 1)}
 							</p>
+							<!-- Pannel Title -->
 							<p
 								class={` font-serif transition-all duration-300 ${
 									openAccordionIndex === index
@@ -85,8 +104,7 @@ This component implements an accordion with an embedded carousel and custom curs
 
 					<!-- Accordion Panel Content -->
 					<div
-						use:fade
-						class={`fade-in-up overflow-hidden flex flex-col lg:flex-row bg-whitesmoke transition-all duration-300 ${
+						class={`overflow-hidden flex flex-col lg:flex-row bg-whitesmoke transition-all duration-300 ${
 							openAccordionIndex === index ? 'max-h-[1000px] lg:h-[600px]' : 'max-h-0 lg:h-0'
 						}`}
 					>
@@ -95,8 +113,10 @@ This component implements an accordion with an embedded carousel and custom curs
 							class="lg:w-[45%] h-full p-6 pb-8 lg:p-12 1100:pl-20 border-t border-r border-silver flex flex-col gap-7 justify-between"
 						>
 							<p
-								use:fade
-								class="fade-in-up font-sans text-arraygray leading-normal font-light text-2xl"
+								use:fade={{ index, delay: 0, onlyFirst: true }}
+								class={`${
+									index === 0 ? 'fade-in-up' : ''
+								} font-sans text-arraygray leading-normal font-light text-2xl`}
 							>
 								{panel.body}
 							</p>
@@ -112,7 +132,7 @@ This component implements an accordion with an embedded carousel and custom curs
 
 						<!-- Carousel -->
 						<div
-							class=" cursor-none group flex lg:w-[55%] 1200:w-[65%] h-[600px] lg:border-t border-silver overflow-hidden"
+							class=" cursor-none group flex lg:w-[55%] 1200:w-[65%] h-[600px] lg:border-t border-silver"
 							on:mouseenter={handleMouseEnter}
 							on:mouseleave={handleMouseLeave}
 							role="presentation"
@@ -123,8 +143,8 @@ This component implements an accordion with an embedded carousel and custom curs
 									hasTrack={false}
 								>
 									<div
-										use:fade={{index, delay: 0, onlyFirst: true}}
-										class="{index === 0 ? 'fade-in-left' : ''} relative h-full w-full"
+										use:fade={{ index, delay: 0, onlyFirst: true }}
+										class={`${index === 0 ? 'fade-in-left' : ''} relative h-full w-full`}
 									>
 										<SplideTrack>
 											{#each panel.caseStudy as project, i}
@@ -182,7 +202,7 @@ This component implements an accordion with an embedded carousel and custom curs
 										</SplideTrack>
 										<!-- Carousel Navigation -->
 										<div
-											class="splide__arrows absolute max-md:-top-5 max-lg:-top-6 right-2.5 z-20 lg:bottom-2.5 lg:right-2.5 xl:hidden flex gap-2.5"
+											class="splide__arrows absolute z-30 max-md:-top-5 max-lg:-top-6 right-2.5 lg:bottom-2.5 lg:right-2.5 xl:hidden flex gap-2.5"
 										>
 											<button
 												class="splide__arrow splide__arrow--prev w-10 h-10 md:w-12 md:h-12 bg-center bg-contain rotate-180 bg-[url('/images/assets/carousel/arrow.svg')]"

@@ -33,8 +33,8 @@ The website's header, featuring logo, navigation links, social media links, and 
 >
 	<!-- Logo -->
 	<div class="relative z-30 flex">
-		<img src="/images/array-wordmark-logo.svg" alt="Array Logo" class="h-11" />
-		<img src="/images/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11" />
+		<img src="/images/logos/array-wordmark-logo.svg" alt="Array Logo" class="h-11" />
+		<img src="/images/logos/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11" />
 	</div>
 
 	<!-- Main Navigation -->
@@ -105,7 +105,10 @@ The website's header, featuring logo, navigation links, social media links, and 
 									</div>
 
 									<!-- Submenu Pages -->
-									<div class={`flex grow flex-wrap bg-cover ${link.dropdownContent.background} `}>
+									<div
+										class="flex grow flex-wrap bg-cover bg-no-repeat bg-right"
+										style="background-image: url('{link.dropdownContent.background}');"
+									>
 										{#each link.dropdownContent.items as cell}
 											<div
 												class={`group/cell py-2.5 px-6 cursor-pointer flex flex-col justify-center items-center gap-y-3.5 relative overflow-hidden border-b border-l border-silver ${
@@ -151,7 +154,11 @@ The website's header, featuring logo, navigation links, social media links, and 
 			<!-- Search Bar -->
 			<li class="px-3.5 1100:py-6 1100:pr-10 relative flex items-center">
 				<button class="relative z-30 flex items-center py-3px" on:click={toggleSearch}>
-					<img src="/images/search-icon.svg" alt="Search" class="cursor-pointer" /></button
+					<img
+						src="/images/navigation/icons/search-icon.svg"
+						alt="Search"
+						class="cursor-pointer"
+					/></button
 				>
 				<input
 					type="text"

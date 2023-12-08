@@ -8,7 +8,6 @@ This CTA component includes:
 - CTA Button
 -->
 
-
 <script>
 	/*------------------------------
 	# Imports
@@ -17,6 +16,7 @@ This CTA component includes:
 	import { gsap } from 'gsap';
 	import Button from '$lib/components/assets/Button.svelte';
 	import { isValidArray, isValidObject } from '$lib/utils/validation';
+	import { preloadImages } from '$lib/utils/preloadImages';
 	import { fade } from '$lib/utils/fade';
 
 	/*------------------------------
@@ -25,6 +25,7 @@ This CTA component includes:
 	export let cta;
 	let button = cta.button || {};
 	let photos = cta.instagramImages || [];
+	let background = cta.backgroundImages || [];
 
 	/*------------------------------
     # Local State
@@ -36,6 +37,12 @@ This CTA component includes:
     # Lifecycle Hooks
     ------------------------------*/
 	onMount(() => {
+		// Prelaod images
+		let images = photos.map((photo) => photo.imageURL);
+		preloadImages(images);
+		let backgrounds = [background.primary, background.secondary];
+		preloadImages(backgrounds);
+
 		// Calculate the total width of the scrollable content
 		const textWidth = scrollContainer.querySelector('p').offsetWidth;
 		const totalWidth = textWidth * scrollContainer.children.length;
@@ -68,11 +75,16 @@ This CTA component includes:
 </script>
 
 <div class="component-spacing">
-	
 	<!-- Call to Action Background and Content -->
-	<div class="pb-32 pt-24 cta-gradient relative">
-		<div class="cta-pinstripe absolute top-0 left-0 w-full h-full"></div>
-		
+	<div
+		class="pb-32 pt-24 bg-no-repeat bg-center bg-cover relative"
+		style="background-image: url('{background.primary}')"
+	>
+		<div
+			class="bg-no-repeat bg-center bg-cover absolute top-0 left-0 w-full h-full"
+			style="background-image: url('{background.secondary}')"
+		></div>
+
 		<!-- Scrolling Text -->
 		<div class="flex flex-col items-center justify-center overflow-hidden">
 			<div class="whitespace-nowrap flex overflow-hidden" bind:this={scrollContainer}>
@@ -104,18 +116,21 @@ This CTA component includes:
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Instagram Image Grid -->
 	{#if isValidArray(photos)}
 		<ul use:fade class="fade-in-down flex overflow-scroll">
-			{#each photos as _, index}
+			{#each photos as photo}
 				<li
-					class={`w-2/3 580:w-5/12 xl:w-1/4 flex flex-col justify-between px-6 py-9 min-h-[350px] min-w-[280px] max-h-[400px] aspect-square relative cursor-pointer cta-bg-${
-						index + 1
-					}`}
+					class="w-2/3 580:w-5/12 xl:w-1/4 flex flex-col justify-between px-6 py-9 min-h-[350px] min-w-[280px] max-h-[400px] aspect-square relative cursor-pointer"
 				>
 					<img
-						class="opacity-90 w-6 absolute top-3 right-3"
+						class="absolute z-10 top-0 left-0 w-full h-full object-cover"
+						src={photo.imageURL}
+						alt={photo.imageAlt}
+					/>
+					<img
+						class="opacity-90 z-20 w-6 absolute top-3 right-3"
 						src="/images/components/cta/picture-in-picture.svg"
 						alt="Open in new tab"
 					/>

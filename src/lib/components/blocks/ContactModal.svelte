@@ -10,8 +10,11 @@ This component includes a contact form that overlays the entire screen.
 	/*------------------------------
 	# Imports
 	------------------------------*/
+	import { onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { isValidArray } from '$lib/utils/validation';
+	import { preloadImages } from '$lib/utils/preloadImages';
+
 	import { gsap } from 'gsap';
 
 	import Button from '$lib/components/assets/Button.svelte';
@@ -69,15 +72,24 @@ This component includes a contact form that overlays the entire screen.
 	$: if ($isOverlayOpen === false) {
 		resetSlideIndex(); // Reset when the modal is closed
 	}
+
+	// Preload background images
+	onMount(() => {
+		// Extract URLs for preloading
+		let images = slides.map((slide) => slide.backgroundImage);
+		// Process files
+		preloadImages(images);
+	});
 </script>
 
 <!-- Contact Form Modal -->
 <div
-	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll component-spacing pt-16 950:pt-20 z-40 transition-all duration-200 ${
+	class={`fixed top-0 left-0 w-full h-full bg-cover bg-center overflow-scroll component-spacing pt-16 950:pt-20 z-40 bg-no-repeat transition-all duration-200 ${
 		$isOverlayOpen
 			? 'opacity-1 visible pointer-events-auto'
 			: 'opacity-0 invisible pointer-events-none'
-	} ${currentBackgroundImage}`}
+	}`}
+	style="background-image: url('{currentBackgroundImage}')"
 >
 	<!-- Conditional rendering based on slide data -->
 	{#if isValidArray(slides) && slides.length > 0 && currentSlideIndex < slides.length}
@@ -114,10 +126,13 @@ This component includes a contact form that overlays the entire screen.
 				</div>
 
 				<div class="flex flex-col xl:flex-row gap-10 xl:gap-y-20">
-					
 					<!-- Slide content -->
-					<div class="xl:basis-340px 900:min-w-320px xl:min-w-[290px] 1400:min-w-[350px] flex flex-col gap-3 1400:gap-5">
-						<p class="text-5xl xl:text-4xl 1400:text-5xl text-white font-serif mb-2.5">{slides[currentSlideIndex].title}</p>
+					<div
+						class="xl:basis-340px 900:min-w-320px xl:min-w-[290px] 1400:min-w-[350px] flex flex-col gap-3 1400:gap-5"
+					>
+						<p class="text-5xl xl:text-4xl 1400:text-5xl text-white font-serif mb-2.5">
+							{slides[currentSlideIndex].title}
+						</p>
 						<p class="text-2xl text-white font-sans font-extralight font-ballance">
 							{slides[currentSlideIndex].description}
 						</p>
@@ -129,11 +144,10 @@ This component includes a contact form that overlays the entire screen.
 							>
 								{slides[currentSlideIndex].header}
 							</p>{/if}
-						
+
 						<!-- Form fields -->
 						<form class="flex flex-wrap gap-5">
 							{#each slides[currentSlideIndex].fields as field}
-								
 								<!-- Text, Email, and Telephone -->
 								{#if field.type === 'text' || field.type === 'email' || field.type === 'tel'}
 									<div
@@ -150,8 +164,8 @@ This component includes a contact form that overlays the entire screen.
 											class="w-full bg-transparent border border-white text-white placeholder:text-white placeholder:opacity-50 h-12 rounded-3xl px-6 text-lg font-normal backdrop-blur"
 										/>
 									</div>
-								
-								<!-- Textarea -->
+
+									<!-- Textarea -->
 								{:else if field.type === 'textarea'}
 									<div class="w-full">
 										{#if field.label}<p
@@ -165,8 +179,8 @@ This component includes a contact form that overlays the entire screen.
 											class="py-2.5 px-15px w-full h-36 resize-none bg-transparent border border-white text-white placeholder:text-white placeholder:opacity-50 rounded-3xl text-lg font-normal backdrop-blur"
 										></textarea>
 									</div>
-									
-								<!-- Checkbox -->
+
+									<!-- Checkbox -->
 								{:else if field.type === 'checkbox'}
 									<div
 										class="grid grid-cols-1 500:grid-cols-2 730:grid-cols-3 grid-rows-2 gap-25px w-full"
@@ -189,7 +203,7 @@ This component includes a contact form that overlays the entire screen.
 											</button>
 										{/each}
 									</div>
-									
+
 									<!-- Form Footer -->
 									{#if slides[currentSlideIndex].footerText}
 										<button

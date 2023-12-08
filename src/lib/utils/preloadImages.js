@@ -1,3 +1,4 @@
+//  Creates a Promise for each image URL, loading the image and resolving the Promise on successful load
 export function preloadImages(urls) {
 	return Promise.all(
 		urls.map((url) => {

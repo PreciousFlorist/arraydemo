@@ -3,7 +3,7 @@
 		{
 			"title": "Have a project in mind? Let's start a conversation!",
 			"buttonText": "Request a quote",
-			"background": "sidebar-contact"
+			"background": "/images/navigation/sidebar/backgrounds/contact.webp"
 		}
 	],
 	"navigationLinks": [
@@ -16,7 +16,7 @@
 			"title": "What we do",
 			"type": "dropdown",
 			"dropdownContent": {
-				"background": "header-primary",
+				"background": "/images/navigation/what-we-do/background.webp",
 				"header": {
 					"title": "Our Approach",
 					"description": "Discover our five-step approach to award-winning greatness.",
@@ -60,14 +60,14 @@
 				"title": "Our approach",
 				"description": "Discover our five-step approach to award-winning greatness.",
 				"buttonText": "See how we work",
-				"background": "sidebar-services"
+				"background": "/images/navigation/sidebar/backgrounds/services.webp"
 			}
 		},
 		{
 			"title": "Company",
 			"type": "dropdown",
 			"dropdownContent": {
-				"background": "header-secondary",
+				"background": "/images/navigation/company/background.webp",
 				"header": {
 					"title": "Meet Array",
 					"description": "Get to know us and learn more about our company culture."
@@ -104,7 +104,7 @@
 			"cta": {
 				"title": "Meet Array",
 				"description": "Get to know us and learn more about our company culture.",
-				"background": "sidebar-contact"
+				"background": "/images/navigation/sidebar/backgrounds/contact.webp"
 			}
 		},
 		{

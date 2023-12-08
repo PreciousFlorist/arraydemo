@@ -66,8 +66,8 @@ This component creates a responsive header for mobile devices, features navigati
 >
 	<!-- Logo -->
 	<div class="relative z-30 flex">
-		<img src="/images/array-wordmark-logo.svg" alt="Array Logo" class="h-11" />
-		<img src="/images/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11" />
+		<img src="/images/logos/array-wordmark-logo.svg" alt="Array Logo" class="h-11" />
+		<img src="/images/logos/array-icon-logo.svg" alt="Array Logo" class="h-11 -ml-11" />
 	</div>
 	<!-- Hamburger -->
 	<button
@@ -138,14 +138,15 @@ This component creates a responsive header for mobile devices, features navigati
 				placeholder="Search our site"
 			/>
 			<div class="w-16 flex justify-center items-center">
-				<img src="/images/search-icon.svg" alt="Search" class="cursor-pointer" />
+				<img src="/images/navigation/icons/search-icon.svg" alt="Search" class="cursor-pointer" />
 			</div>
 		</div>
 		<!-- Call to Action -->
 		{#if isValidArray(cta)}
 			{#each cta as banner}
 				<div
-					class={`py-10 z-40 px-6 flex flex-col justify-center items-center ${banner.background}`}
+					class="py-10 z-40 px-6 flex flex-col justify-center items-center"
+					style="background-image: url('{banner.background}');"
 				>
 					<p class="font-serif text-white text-4xl mb-6 text-center">{banner.title}</p>
 					<Button text={banner.buttonText} onClick={openContactModal} />
@@ -201,7 +202,8 @@ This component creates a responsive header for mobile devices, features navigati
 
 						<!-- Background -->
 						<div
-							class={`py-10 px-6 flex flex-col gap-2 ${link.dropdownContent.background} bg-cover`}
+							class="py-10 px-6 flex flex-col gap-2 bg-cover"
+							style="background-image: url('{link.dropdownContent.background}')"
 						>
 							<p class="font-serif text-white text-3xl tracking-1px">{link.cta.title}</p>
 							<p class="font-sans text-white text-base tracking-1px font-light">
