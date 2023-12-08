@@ -7,7 +7,7 @@ I live right up the road from your office, on Prideaux and Fitz, and have been p
 
 So, I've seen you around, keeping up with your socials, and have been checking out your website. I love your design work, and my development background seems to align very well with your product offerings.
 
-So, as we're nearing the end of a season, I'm reaching out to connect with you and see what's up - and if there might be some chemistry here. 
+Now, as we're nearing the end of a season, I'm reaching out to connect with you and see what's up - and if there might be some chemistry here. 
 
 ![What the f--](https://media1.tenor.com/m/4FX2fvso4BEAAAAC/wtf-wtf-tom-delonge.gif)
 
